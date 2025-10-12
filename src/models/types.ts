@@ -21,7 +21,6 @@ export interface ProfileData {
   name: string;
   title: string;
   bio: string;
-  location: string;
   email: string;
   phone?: string;
   profileImage: string;

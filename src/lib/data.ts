@@ -7,7 +7,6 @@ export const siteConfig = {
   tagline: "Multimodal Safety in Robotics",
   domain: "rafafelix.info",
   email: "contact@rafafelix.info",
-  location: "San Francisco, CA",
   description: "Personal website of Rafael Felix, Ph.D., Research Scientist specializing in multimodal AI for Trust & Safety and Robotics.",
   keywords: ["Rafael Felix", "Research Scientist", "AI", "Machine Learning", "Multimodal AI", "Robotics", "Trust & Safety"],
   author: "Rafael Felix",
@@ -23,7 +22,6 @@ export const profileData: ProfileData = {
   name: siteConfig.name,
   title: siteConfig.title,
   bio: "Rafael Felix, Ph.D., is a Research Scientist specializing in multimodal AI for Trust & Safety and Robotics. His work bridges academic rigor and large-scale deployment, shaping AI systems that protect and empower billions of users worldwide. Across industry and research, Rafael has led projects that transform state-of-the-art models into production pipelines serving 1B+ daily users with p99 latency under 2 seconds, a rare balance of scientific precision and real-world scalability.\n\nBefore TikTok, his research advanced gaze estimation, zero-shot learning, and vision-language systems, earning publications at top venues such as ICCV, ECCV, and WACV. With experience spanning academia and high-impact startups, he has cultivated a leadership style rooted in mentorship, technical excellence, and organizational alignment, helping teams deliver research that matters.\n\nDriven by curiosity and responsibility, Rafael's current focus explores safe, context-aware AI that can reason across text, vision, and motion, pushing the frontier of how intelligent systems perceive and interact with the world.",
-  location: siteConfig.location,
   email: siteConfig.email,
   phone: "+1 (555) 123-4567",
   profileImage: "/images/profile.png",
@@ -56,10 +54,10 @@ export const profileData: ProfileData = {
     }
   ],
   interests: [
-    "Safe multimodal understanding for content integrity, robotics, and assistive AI",
-    "Efficient model deployment that balances latency, accuracy, and cost at planetary scale",
+    "Multimodal Machine Learning for Safety and robotic applications and VLA",
     "Human-in-the-loop learning that ensures responsible feedback loops between model and society",
-    "Foundation models", "real-time robotics", "AI safety"
+    "Gen AI for data augmentation for Embodied environment",
+    "Efficient model deployment that balances latency, accuracy, and cost at planetary scale"
   ],
   experience: [
     {
