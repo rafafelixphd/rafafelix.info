@@ -5,7 +5,8 @@ import { Container } from '@/components/ui/Container';
 import { Section } from '@/components/ui/Section';
 import { Card, CardContent, CardHeader } from '@/components/ui/Card';
 import { Skills } from '@/components/ui/Skills';
-import { profileData } from '@/lib/data';
+import { FloatingCardsContainer } from '@/components/ui/FloatingCard';
+import { profileData, floatingCards } from '@/lib/data';
 
 export const metadata = {
   title: 'Profile - Rafael Felix',

@@ -1,4 +1,5 @@
 import { ProfileData, SocialLink, Project, Publication } from '@/models/types';
+import { FloatingCardData } from '@/components/ui/FloatingCard';
 
 // Site-wide constants
 export const siteConfig = {
@@ -243,6 +244,37 @@ export const projects: Project[] = [
       "Mobile-first responsive design"
     ]
   }
+];
+
+export const floatingCards: FloatingCardData[] = [
+  {
+    id: 'phd-achievement',
+    image: '/images/album/complete-phd-2.jpg',
+    alt: 'PhD Completion',
+    title: 'PhD Achievement',
+    description: 'Celebrating doctoral research completion in computer science and AI.',
+  },
+  {
+    id: 'acrv-research',
+    image: '/images/album/acrv_image_2018.png',
+    alt: 'ACRV Research',
+    title: 'ACRV Research',
+    description: 'Advanced computer vision and robotics research at Australian Centre for Robotic Vision.',
+  },
+  {
+    id: 'ai-innovation',
+    image: '/images/album/amplified-intelligence-open-camera-demo.jpg',
+    alt: 'AI Demo',
+    title: 'AI Innovation',
+    description: 'Demonstrating advanced AI systems and computer vision applications.',
+  },
+  {
+    id: 'robotics-innovation',
+    image: '/images/album/vex-meeting-dog-bot.jpg',
+    alt: 'Robotics Innovation',
+    title: 'Robotics Innovation',
+    description: 'Exploring robotics solutions and human-robot interaction.',
+  },
 ];
 
 export const publications: Publication[] = [
