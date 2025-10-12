@@ -1,7 +1,7 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'as'> {
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
   size?: 'sm' | 'md' | 'lg';
   asChild?: boolean;
@@ -34,8 +34,9 @@ export const Button: React.FC<ButtonProps> = ({
   const classes = cn(baseClasses, variants[variant], sizes[size], className);
 
   if (asChild) {
-    return React.cloneElement(children as React.ReactElement, {
-      className: cn(classes, (children as React.ReactElement).props?.className),
+    const child = children as React.ReactElement<{ className?: string }>;
+    return React.cloneElement(child, {
+      className: cn(classes, child.props?.className),
     });
   }
 

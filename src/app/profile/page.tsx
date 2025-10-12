@@ -5,9 +5,8 @@ import { Container } from '@/components/ui/Container';
 import { Section } from '@/components/ui/Section';
 import { Card, CardContent, CardHeader } from '@/components/ui/Card';
 import { Skills } from '@/components/ui/Skills';
-import { FloatingCardsContainer } from '@/components/ui/FloatingCard';
 import { BaseLayout } from '@/components/layout/BaseLayout';
-import { profileData, floatingCards } from '@/lib/data';
+import { profileData } from '@/lib/data';
 
 export const metadata = {
   title: 'Profile - Rafael Felix',
@@ -85,22 +84,6 @@ export default function ProfilePage() {
         </Container>
       </Section>
 
-      {/* Skills Section */}
-      <Section className="py-16 bg-background-primary">
-        <Container>
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-text-primary mb-4">
-              My <span className="text-interactive-tertiary">Skills</span>
-            </h2>
-            <p className="text-text-secondary max-w-2xl mx-auto">
-              Technologies and expertise across different domains, with interactive skill indicators
-            </p>
-          </div>
-          <Skills skills={profileData.skills} />
-        </Container>
-      </Section>
-
-
       {/* Professional Interests Section */}
       <Section className="py-16 bg-background-primary">
         <Container>
@@ -110,7 +93,7 @@ export default function ProfilePage() {
                 Professional <span className="text-interactive-tertiary">Interests</span>
               </h2>
               <p className="text-text-secondary">
-                Areas I'm passionate about and actively exploring
+                Areas I&apos;m passionate about and actively exploring
               </p>
             </div>
 
@@ -177,15 +160,33 @@ export default function ProfilePage() {
         </Container>
       </Section>
 
+      {/* Skills Section */}
+      <Section className="py-16 bg-background-primary">
+        <Container>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-text-primary mb-4">
+              My <span className="text-interactive-tertiary">Skills</span>
+            </h2>
+            <p className="text-text-secondary max-w-2xl mx-auto">
+              Technologies and expertise across different domains, with interactive skill indicators
+            </p>
+          </div>
+          <Skills skills={profileData.skills} />
+        </Container>
+      </Section>
+
+
+
+
       {/* Contact Info */}
       <Section className="bg-secondary-50 dark:bg-secondary-800">
         <Container>
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 dark:text-white mb-4">
-              Let's Connect
+              Let&apos;s Connect
             </h2>
             <p className="text-lg text-secondary-600 dark:text-secondary-400 mb-8">
-              I'm always interested in discussing new opportunities, collaborations, or just having a chat about technology.
+              I&apos;m always interested in discussing new opportunities, collaborations, or just having a chat about technology.
             </p>
             
             <div className="text-center mb-8">

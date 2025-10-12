@@ -166,12 +166,8 @@ export function ProjectHero({ project }: ProjectHeroProps) {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                       );
-                    };
+                    }
 
-                    const getAchievementBadge = (index: number) => {
-                      const badges = ['🏆', '⭐', '🚀', '💎', '🎯', '🔥', '⚡', '🎖️'];
-                      return badges[index % badges.length];
-                    };
 
                     return (
                       <div 
@@ -182,7 +178,7 @@ export function ProjectHero({ project }: ProjectHeroProps) {
                           {/* Achievement Badge */}
                           <div className="flex-shrink-0">
                             <div className="w-12 h-12 bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-900 dark:to-primary-800 rounded-lg flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300">
-                              {getAchievementBadge(index)}
+                              {getAchievementIcon(highlight)}
                             </div>
                           </div>
                           

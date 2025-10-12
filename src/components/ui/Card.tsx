@@ -5,9 +5,12 @@ interface CardProps {
   children: React.ReactNode;
   className?: string;
   hover?: boolean;
+  style?: React.CSSProperties;
+  onMouseEnter?: () => void;
+  onMouseLeave?: () => void;
 }
 
-export const Card: React.FC<CardProps> = ({ children, className, hover = false }) => {
+export const Card: React.FC<CardProps> = ({ children, className, hover = false, style, onMouseEnter, onMouseLeave }) => {
   return (
     <div
       className={cn(
@@ -15,6 +18,9 @@ export const Card: React.FC<CardProps> = ({ children, className, hover = false }
         hover && 'hover:shadow-md hover:border-border-primary transition-all duration-200',
         className
       )}
+      style={style}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
     >
       {children}
     </div>

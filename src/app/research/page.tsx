@@ -1,21 +1,20 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
 import { Section } from '@/components/ui/Section';
-import { Card, CardContent, CardHeader } from '@/components/ui/Card';
+import { Card, CardContent } from '@/components/ui/Card';
 import { BaseLayout } from '@/components/layout/BaseLayout';
 import { publications } from '@/lib/data';
 import { Publication } from '@/models/types';
+import { researchContent } from '@/lib/research';
 
 export default function ResearchPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedYear, setSelectedYear] = useState<string>('all');
 
-  const categories = ['all', 'journal', 'conference', 'workshop', 'preprint', 'book'];
+  const categories = ['all', 'journal', 'conference', 'preprint'];
   const years = ['all', ...Array.from(new Set(publications.map(p => p.year.toString()))).sort((a, b) => b.localeCompare(a))];
 
   const filteredPublications = publications.filter((publication) => {
@@ -84,13 +83,13 @@ export default function ResearchPage() {
         <Container>
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold text-text-primary mb-6">
-              Research &{' '}
-              <span className="text-interactive-primary">
-                Publications
+              {researchContent.hero.title.split(' & ')[0]} &{' '}
+              <span className="text-interactive-tertiary">
+                {researchContent.hero.title.split(' & ')[1]}
               </span>
             </h1>
             <p className="text-xl text-text-secondary mb-8">
-              Academic contributions and research work in computer science, machine learning, and software engineering.
+              {researchContent.hero.description}
             </p>
             
             <div className="flex items-center justify-center space-x-6 text-sm text-text-secondary">
@@ -100,11 +99,11 @@ export default function ResearchPage() {
               </div>
               <div className="flex items-center space-x-2">
                 <span className="font-medium">📊</span>
-                <span>{totalCitations} Citations</span>
+                <span> 600+ Citations</span>
               </div>
               <div className="flex items-center space-x-2">
                 <span className="font-medium">🎯</span>
-                <span>H-index: {hIndex}</span>
+                <span>H-index: 5</span>
               </div>
             </div>
           </div>
@@ -124,66 +123,37 @@ export default function ResearchPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card hover>
-              <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-primary-600 dark:text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold text-secondary-900 dark:text-white mb-2">
-                  Machine Learning
-                </h3>
-                <p className="text-secondary-600 dark:text-secondary-400">
-                  Scalable ML platforms, algorithm optimization, and practical applications in real-world scenarios.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card hover>
-              <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-primary-600 dark:text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold text-secondary-900 dark:text-white mb-2">
-                  AI Research
-                </h3>
-                <p className="text-secondary-600 dark:text-secondary-400">
-                  System architecture, development methodologies, and tools for building robust software solutions.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card hover>
-              <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-primary-600 dark:text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold text-secondary-900 dark:text-white mb-2">
-                  Blockchain Technology
-                </h3>
-                <p className="text-secondary-600 dark:text-secondary-400">
-                  Consensus mechanisms, scalability solutions, and applications in distributed systems.
-                </p>
-              </CardContent>
-            </Card>
+            {researchContent.researchAreas.map((area) => (
+              <Card key={area.id} hover>
+                <CardContent className="p-6 text-center">
+                  <div className="w-16 h-16 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-primary-600 dark:text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={area.icon} />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-semibold text-secondary-900 dark:text-white mb-2">
+                    {area.title}
+                  </h3>
+                  <p className="text-secondary-600 dark:text-secondary-400">
+                    {area.description}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </Container>
       </Section>
+
 
       {/* Publications */}
       <Section className="bg-secondary-50 dark:bg-secondary-800">
         <Container>
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 dark:text-white mb-4">
-              Publications
+              {researchContent.publications.title}
             </h2>
             <p className="text-lg text-secondary-600 dark:text-secondary-400 max-w-2xl mx-auto">
-              Peer-reviewed papers, conference proceedings, and academic contributions
+              {researchContent.publications.description}
             </p>
           </div>
 
@@ -205,23 +175,7 @@ export default function ResearchPage() {
                 </button>
               ))}
             </div>
-            
-            <div className="flex flex-wrap gap-2">
-              <span className="text-sm font-medium text-secondary-700 dark:text-secondary-300 mr-2">Year:</span>
-              {years.map((year) => (
-                <button
-                  key={year}
-                  onClick={() => setSelectedYear(year)}
-                  className={`px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200 ${
-                    selectedYear === year
-                      ? 'bg-primary-600 text-white'
-                      : 'bg-secondary-100 dark:bg-secondary-800 text-secondary-700 dark:text-secondary-300 hover:bg-primary-100 dark:hover:bg-primary-900'
-                  }`}
-                >
-                  {year}
-                </button>
-              ))}
-            </div>
+
           </div>
 
           {/* Publications List */}
@@ -297,10 +251,10 @@ export default function ResearchPage() {
         <Container>
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 dark:text-white mb-4">
-              Research Timeline
+              {researchContent.timeline.title}
             </h2>
             <p className="text-lg text-secondary-600 dark:text-secondary-400 max-w-2xl mx-auto">
-              Key milestones and contributions over the years
+              {researchContent.timeline.description}
             </p>
           </div>
 
@@ -312,7 +266,7 @@ export default function ResearchPage() {
               <div className="space-y-8">
                 {publications
                   .sort((a, b) => b.year - a.year)
-                  .map((publication, index) => (
+                  .map((publication) => (
                     <div key={publication.id} className="relative flex items-start space-x-6">
                       {/* Timeline dot */}
                       <div className="relative z-10 w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
@@ -358,25 +312,25 @@ export default function ResearchPage() {
               <div className="text-3xl font-bold text-primary-600 dark:text-primary-400 mb-2">
                 {publications.length}
               </div>
-              <p className="text-secondary-600 dark:text-secondary-400">Total Publications</p>
+              <p className="text-secondary-600 dark:text-secondary-400">{researchContent.stats.totalPublications}</p>
             </div>
             <div>
               <div className="text-3xl font-bold text-primary-600 dark:text-primary-400 mb-2">
                 {totalCitations}
               </div>
-              <p className="text-secondary-600 dark:text-secondary-400">Total Citations</p>
+              <p className="text-secondary-600 dark:text-secondary-400">{researchContent.stats.totalCitations}</p>
             </div>
             <div>
               <div className="text-3xl font-bold text-primary-600 dark:text-primary-400 mb-2">
                 {hIndex}
               </div>
-              <p className="text-secondary-600 dark:text-secondary-400">H-index</p>
+              <p className="text-secondary-600 dark:text-secondary-400">{researchContent.stats.hIndex}</p>
             </div>
             <div>
               <div className="text-3xl font-bold text-primary-600 dark:text-primary-400 mb-2">
                 {new Set(publications.map(p => p.venue)).size}
               </div>
-              <p className="text-secondary-600 dark:text-secondary-400">Venues</p>
+              <p className="text-secondary-600 dark:text-secondary-400">{researchContent.stats.venues}</p>
             </div>
           </div>
         </Container>

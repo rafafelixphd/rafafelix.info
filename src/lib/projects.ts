@@ -66,7 +66,9 @@ export const getProjects = (): Project[] => projects;
 // Initialize projects on module load (for SSR compatibility)
 if (typeof window === 'undefined') {
   // Server-side: load synchronously
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
   const fs = require('fs');
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
   const path = require('path');
   try {
     const projectsDir = path.join(process.cwd(), 'public', 'data', 'projects');

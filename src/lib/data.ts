@@ -1,4 +1,4 @@
-import { ProfileData, SocialLink, Publication } from '@/models/types';
+import { ProfileData, SocialLink } from '@/models/types';
 import { FloatingCardData } from '@/components/ui/FloatingCard';
 import { getProjects } from './projects';
 
@@ -13,8 +13,8 @@ export const siteConfig = {
   keywords: ["Rafael Felix", "Research Scientist", "AI", "Machine Learning", "Multimodal AI", "Robotics", "Trust & Safety"],
   author: "Rafael Felix",
   creator: "Rafael Felix",
-  twitter: "@rafafelix",
-  linkedin: "in/rafafelixphd",
+  twitter: "@rafafelixphd",
+  linkedin: "rafafelixphd",
   github: "rfelixmg",
   googleScholar: "nijDcmQAAAAJ",
   instagram: "rafafelix.phd",
@@ -35,20 +35,20 @@ export const profileData: ProfileData = {
   instagramUrl: `https://www.instagram.com/${siteConfig.instagram}/`,
   skills: [
     {
-      category: "AI & Machine Learning",
-      items: ["Transformers", "Diffusion", "GANs", "ViTs", "LLMs (CLIP, LLaVA, LLaMA, Qwen)", "Zero-Shot Learning"]
+      category: "Machine Learning",
+      items: ["Transformers", "Diffusion", "GANs", "ViTs", "Robotics", "Zero-Shot Learning"]
+    },
+    {
+      category: "Applied Research",
+      items: ["Real-time scalability", "Dataset Collection", "RLHF", "Product Lifecycle"]
+    },
+    {
+      category: "Leadership & Mentorship",
+      items: ["Cross-team alignment", "Research Roadmap", "Training and documentation"]
     },
     {
       category: "Engineering & Deployment",
       items: ["PyTorch", "TensorFlow", "CUDA", "TensorRT", "ONNX", "Docker", "Kubernetes", "C++", "Spark", "SQL"]
-    },
-    {
-      category: "Applied Research",
-      items: ["Real-time inference optimization", "model compression", "multimodal understanding", "RLHF"]
-    },
-    {
-      category: "Leadership & Mentorship",
-      items: ["Cross-team alignment", "research enablement", "reproducible pipelines", "workshops"]
     },
     {
       category: "Languages",
@@ -181,67 +181,24 @@ export const floatingCards: FloatingCardData[] = [
   },
 ];
 
-export const publications: Publication[] = [
-  {
-    id: "pub-1",
-    title: "Scalable Machine Learning Platforms: A Comprehensive Survey",
-    authors: ["Rafael Felix", "Dr. Sarah Johnson", "Prof. Michael Chen"],
-    venue: "Journal of Machine Learning Research",
-    year: 2024,
-    citations: 15,
-    url: "https://jmlr.org/papers/v25/24-001.html",
-    abstract: "This paper presents a comprehensive survey of scalable machine learning platforms, analyzing their architectures, performance characteristics, and use cases in modern AI research.",
-    category: "journal",
-    doi: "10.5555/12345678"
-  },
-  {
-    id: "pub-2",
-    title: "Novel Consensus Mechanisms for Blockchain Scalability",
-    authors: ["Rafael Felix", "Dr. Alex Rodriguez"],
-    venue: "IEEE International Conference on Blockchain",
-    year: 2023,
-    citations: 28,
-    url: "https://ieeexplore.ieee.org/document/12345678",
-    abstract: "We propose a novel consensus mechanism that significantly improves blockchain scalability while maintaining security guarantees. Our approach reduces transaction confirmation time by 70%.",
-    category: "conference",
-    doi: "10.1109/ICBC.2023.12345678"
-  },
-  {
-    id: "pub-3",
-    title: "Privacy-Preserving Data Analytics in Healthcare",
-    authors: ["Dr. Maria Garcia", "Rafael Felix", "Prof. David Kim"],
-    venue: "ACM Conference on Health Informatics",
-    year: 2023,
-    citations: 12,
-    url: "https://dl.acm.org/doi/10.1145/12345678",
-    abstract: "This work presents a framework for privacy-preserving data analytics in healthcare settings, enabling collaborative research while protecting patient privacy.",
-    category: "conference",
-    doi: "10.1145/12345678"
-  },
-  {
-    id: "pub-4",
-    title: "Real-time Collaborative Data Visualization",
-    authors: ["Rafael Felix"],
-    venue: "Workshop on Interactive Data Visualization",
-    year: 2023,
-    citations: 8,
-    url: "https://idv-workshop.org/2023/papers/felix.pdf",
-    abstract: "We present a system for real-time collaborative data visualization that enables multiple users to work together on complex data analysis tasks.",
-    category: "workshop"
-  },
-  {
-    id: "pub-5",
-    title: "Edge Computing for IoT Applications: Challenges and Solutions",
-    authors: ["Prof. Lisa Wang", "Rafael Felix", "Dr. James Brown"],
-    venue: "IEEE Internet of Things Journal",
-    year: 2022,
-    citations: 45,
-    url: "https://ieeexplore.ieee.org/document/98765432",
-    abstract: "This paper explores the challenges and solutions in edge computing for IoT applications, providing insights into optimization techniques and deployment strategies.",
-    category: "journal",
-    doi: "10.1109/JIOT.2022.98765432"
-  }
-];
+// Import publications from JSON file
+import publicationsData from '../../public/data/publications.json';
+import { Publication } from '@/models/types';
+
+// Convert JSON data to Publication interface
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const publications: Publication[] = publicationsData.map((pub: any) => ({
+  id: pub.id,
+  title: pub.title,
+  authors: pub.authors,
+  venue: pub.venue,
+  year: pub.year || 0,
+  citations: pub.citations || 0,
+  url: pub.url,
+  abstract: pub.abstract,
+  category: pub.category as 'journal' | 'conference' | 'workshop' | 'preprint' | 'book',
+  doi: pub.doi
+}));
 
 export const navigationItems = [
   { label: "Home", href: "/" },
