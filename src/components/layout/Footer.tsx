@@ -101,7 +101,7 @@ export const Footer: React.FC = () => {
           <div className="mt-8 pt-8 border-t border-border-secondary">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <p className="text-sm text-text-secondary">
-                © {currentYear} Rafael Felix. All rights reserved.
+                © {currentYear} Rafael Felix, Ph.D. Research Scientist. All rights reserved.
               </p>
               <p className="text-sm text-text-secondary mt-2 md:mt-0">
                 Built with Next.js & Tailwind CSS

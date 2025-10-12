@@ -49,7 +49,6 @@ export interface Project {
   description: string;
   longDescription?: string;
   technologies: string[];
-  category: 'web' | 'research' | 'mobile' | 'other';
   status: 'completed' | 'in-progress' | 'planned';
   featured: boolean;
   images: string[];
@@ -58,6 +57,10 @@ export interface Project {
   startDate: string;
   endDate?: string;
   outcomes?: string[];
+  challenge?: string;
+  solution?: string;
+  results?: string;
+  technicalHighlights?: string[];
 }
 
 export interface Publication {

@@ -1,5 +1,6 @@
-import { ProfileData, SocialLink, Project, Publication } from '@/models/types';
+import { ProfileData, SocialLink, Publication } from '@/models/types';
 import { FloatingCardData } from '@/components/ui/FloatingCard';
+import { projects } from './projects';
 
 // Site-wide constants
 export const siteConfig = {
@@ -145,106 +146,8 @@ export const socialLinks: SocialLink[] = [
   }
 ];
 
-export const projects: Project[] = [
-  {
-    id: "ai-research-platform",
-    title: "AI Research Platform",
-    description: "A comprehensive platform for machine learning research with collaborative features and experiment tracking.",
-    longDescription: "Built a scalable platform that enables researchers to collaborate on machine learning projects, track experiments, and share results. The platform includes real-time collaboration tools, version control for datasets, and automated experiment tracking with visualization dashboards.",
-    technologies: ["React", "Node.js", "Python", "TensorFlow", "MongoDB", "Docker"],
-    category: "web",
-    status: "completed",
-    featured: true,
-    images: ["/images/project-ai-platform-1.jpg", "/images/project-ai-platform-2.jpg"],
-    demoUrl: "https://ai-platform-demo.rafafelix.info",
-    githubUrl: "https://github.com/rafafelix/ai-research-platform",
-    startDate: "2024-01-01",
-    endDate: "2024-06-30",
-    outcomes: [
-      "Reduced experiment setup time by 60%",
-      "Enabled collaboration between 50+ researchers",
-      "Processed over 10TB of research data"
-    ]
-  },
-  {
-    id: "mobile-health-app",
-    title: "Health Tracking Mobile App",
-    description: "Cross-platform mobile application for health monitoring with AI-powered insights.",
-    longDescription: "Developed a React Native application that tracks various health metrics and provides personalized insights using machine learning. The app integrates with wearable devices and provides real-time health monitoring with privacy-first design.",
-    technologies: ["React Native", "TypeScript", "Python", "Firebase", "TensorFlow Lite"],
-    category: "mobile",
-    status: "completed",
-    featured: true,
-    images: ["/images/project-health-app-1.jpg"],
-    demoUrl: "https://health-app-demo.rafafelix.info",
-    githubUrl: "https://github.com/rafafelix/health-tracker",
-    startDate: "2023-08-01",
-    endDate: "2024-02-28",
-    outcomes: [
-      "10,000+ active users",
-      "4.8/5 app store rating",
-      "Featured in health tech publications"
-    ]
-  },
-  {
-    id: "data-visualization-tool",
-    title: "Interactive Data Visualization Tool",
-    description: "Web-based tool for creating interactive data visualizations with drag-and-drop interface.",
-    longDescription: "Created a powerful web application that allows users to create interactive data visualizations without coding. Features include drag-and-drop interface, real-time collaboration, and export to multiple formats.",
-    technologies: ["Next.js", "D3.js", "TypeScript", "PostgreSQL", "WebSocket"],
-    category: "web",
-    status: "completed",
-    featured: true,
-    images: ["/images/project-viz-tool-1.jpg"],
-    demoUrl: "https://viz-tool-demo.rafafelix.info",
-    githubUrl: "https://github.com/rafafelix/data-viz-tool",
-    startDate: "2023-03-01",
-    endDate: "2023-12-31",
-    outcomes: [
-      "Used by 500+ data analysts",
-      "Generated 10,000+ visualizations",
-      "Featured in data science conferences"
-    ]
-  },
-  {
-    id: "blockchain-research",
-    title: "Blockchain Consensus Research",
-    description: "Research project on improving blockchain consensus mechanisms for better scalability.",
-    longDescription: "Conducted academic research on novel consensus mechanisms that improve blockchain scalability while maintaining security. Published findings in top-tier conferences and implemented proof-of-concept.",
-    technologies: ["Python", "Solidity", "Rust", "Docker", "AWS"],
-    category: "research",
-    status: "completed",
-    featured: false,
-    images: ["/images/project-blockchain-1.jpg"],
-    githubUrl: "https://github.com/rafafelix/consensus-research",
-    startDate: "2022-09-01",
-    endDate: "2023-05-31",
-    outcomes: [
-      "Published in IEEE Blockchain Conference",
-      "50+ citations",
-      "Open source implementation"
-    ]
-  },
-  {
-    id: "portfolio-website",
-    title: "Personal Portfolio Website",
-    description: "Modern, responsive portfolio website showcasing projects and professional experience.",
-    longDescription: "Designed and developed a modern portfolio website with focus on performance, accessibility, and user experience. Features include project showcase, blog integration, and contact form.",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
-    category: "web",
-    status: "in-progress",
-    featured: false,
-    images: ["/images/project-portfolio-1.jpg"],
-    demoUrl: "https://rafafelix.info",
-    githubUrl: "https://github.com/rafafelix/portfolio",
-    startDate: "2024-12-01",
-    outcomes: [
-      "Lighthouse score > 95",
-      "WCAG 2.1 AA compliant",
-      "Mobile-first responsive design"
-    ]
-  }
-];
+// Export projects from separate file
+export { projects };
 
 export const floatingCards: FloatingCardData[] = [
   {
@@ -252,7 +155,7 @@ export const floatingCards: FloatingCardData[] = [
     image: '/images/album/complete-phd-2.jpg',
     alt: 'PhD Completion',
     title: 'PhD Achievement',
-    description: 'Celebrating doctoral research completion in computer science and AI.',
+    description: 'Celebrating doctoral research achievement in computer science and AI.',
   },
   {
     id: 'acrv-research',
