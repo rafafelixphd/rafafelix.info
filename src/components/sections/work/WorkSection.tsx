@@ -49,7 +49,7 @@ export function WorkSection() {
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold text-text-primary mb-6">
               My{' '}
-              <span className="text-interactive-primary">
+              <span className="text-interactive-tertiary">
                 Work
               </span>
             </h1>
