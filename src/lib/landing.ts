@@ -74,6 +74,7 @@ export interface TimelineStep {
   duration: string;
   description: string;
   deliverables: string[];
+  images: string[];
 }
 
 export interface WorkshopModule {
@@ -238,6 +239,7 @@ export const landingContent: LandingData = {
       id: "lean-prototype",
       title: "Prototype",
       duration: "1–2 Weeks",
+      images: ["/images/landing/mvp_1.1.webp"],
       description:
         "Start lean. Validate your idea fast using low-code tools and hosted AI models — no heavy engineering required.",
       deliverables: [
@@ -251,6 +253,7 @@ export const landingContent: LandingData = {
       id: "core-mvp",
       title: "Core MVP",
       duration: "4–6 Weeks",
+      images: ["/images/landing/mvp_2.3.webp"],
       description:
         "Build your first working product using reliable, off-the-shelf AI systems. Test real behaviour with real users.",
       deliverables: [
@@ -264,6 +267,7 @@ export const landingContent: LandingData = {
       id: "specialized-mvp",
       title: "The MVP",
       duration: "6–10 Weeks",
+      images: ["/images/landing/mvp_3.2.webp"],
       description:
         "Specialize your AI by adapting existing models to your domain. Create clear differentiation and measurable ROI.",
       deliverables: [
@@ -277,6 +281,7 @@ export const landingContent: LandingData = {
       id: "beast-mvp",
       title: "Beast MVP",
       duration: "3+ Months",
+      images: ["/images/landing/mvp_4.1.webp"],
       description:
         "Scale the vision. Coordinate the full product lifecycle — from data pipelines and compliance to continuous improvement.",
       deliverables: [

@@ -13,7 +13,7 @@ export default function LandingWorkshops({ data }: LandingWorkshopsProps) {
             Teach Your Team to Think Like AI Builders
           </h2>
           <p className="text-xl text-text-secondary max-w-3xl mx-auto mb-8">
-            Four 90-minute clinics to align your team's strategy and language around practical AI.
+            Four 90-minute clinics to align your team&apos;s strategy and language around practical AI.
           </p>
           <div className="bg-surface-primary/50 backdrop-blur-sm rounded-lg p-6 max-w-2xl mx-auto border border-border-secondary">
             <p className="text-text-primary font-medium">

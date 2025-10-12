@@ -1,12 +1,11 @@
-import { TimelineStep, ImageAssets } from '@/lib/landing';
+import { TimelineStep } from '@/lib/landing';
 import Image from 'next/image';
 
 interface LandingTimelineProps {
   data: TimelineStep[];
-  images: ImageAssets;
 }
 
-export default function LandingTimeline({ data, images }: LandingTimelineProps) {
+export default function LandingTimeline({ data }: LandingTimelineProps) {
   return (
     <section className="py-24">
       <div className="max-w-7xl mx-auto px-6">
@@ -63,7 +62,7 @@ export default function LandingTimeline({ data, images }: LandingTimelineProps) 
               <div className="flex-1 max-w-lg mx-auto">
                 <div className="aspect-[4/3] bg-surface-primary/30 rounded-2xl border border-border-secondary overflow-hidden">
                   <Image
-                    src={images.placeholder}
+                    src={step.images[0]}
                     alt={step.title}
                     width={600}
                     height={450}

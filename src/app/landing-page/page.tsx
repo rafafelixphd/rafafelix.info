@@ -16,7 +16,7 @@ export default function LandingPage() {
     <BaseLayout>
       <main className="scroll-smooth scroll-snap-y scroll-snap-mandatory">
         <div className="scroll-snap-center">
-          <LandingHero data={landingContent.hero} images={landingContent.images} />
+          <LandingHero data={landingContent.hero} />
         </div>
         <div className="scroll-snap-center">
           <LandingAbout data={landingContent.about} images={landingContent.images} />
@@ -31,7 +31,7 @@ export default function LandingPage() {
           <LandingResults data={landingContent.results} />
         </div>
         <div className="scroll-snap-center">
-          <LandingTimeline data={landingContent.timeline} images={landingContent.images} />
+          <LandingTimeline data={landingContent.timeline} />
         </div>
         <div className="scroll-snap-center">
           <LandingWorkshops data={landingContent.workshops} />

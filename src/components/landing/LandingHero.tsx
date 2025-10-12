@@ -1,11 +1,10 @@
-import { HeroSection, ImageAssets } from '@/lib/landing';
+import { HeroSection } from '@/lib/landing';
 
 interface LandingHeroProps {
   data: HeroSection;
-  images: ImageAssets;
 }
 
-export default function LandingHero({ data, images }: LandingHeroProps) {
+export default function LandingHero({ data }: LandingHeroProps) {
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Content */}

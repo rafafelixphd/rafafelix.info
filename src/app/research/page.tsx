@@ -7,7 +7,6 @@ import { Section } from '@/components/ui/Section';
 import { Card, CardContent } from '@/components/ui/Card';
 import { BaseLayout } from '@/components/layout/BaseLayout';
 import { publications } from '@/lib/data';
-import { Publication } from '@/models/types';
 import { researchContent } from '@/lib/research';
 
 export default function ResearchPage() {
@@ -53,24 +52,6 @@ export default function ResearchPage() {
     }
   };
 
-  const totalCitations = publications.reduce((sum, pub) => sum + (pub.citations || 0), 0);
-  const hIndex = calculateHIndex(publications);
-
-  function calculateHIndex(pubs: Publication[]): number {
-    const citations = pubs
-      .map(p => p.citations || 0)
-      .sort((a, b) => b - a);
-    
-    let h = 0;
-    for (let i = 0; i < citations.length; i++) {
-      if (citations[i] >= i + 1) {
-        h = i + 1;
-      } else {
-        break;
-      }
-    }
-    return h;
-  }
 
   return (
     <BaseLayout>
