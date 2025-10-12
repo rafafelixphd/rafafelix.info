@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Container } from '@/components/ui/Container';
 import { socialLinks } from '@/lib/data';
 
@@ -14,8 +15,14 @@ export const Footer: React.FC = () => {
             {/* Brand */}
             <div className="space-y-4">
               <Link href="/" className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-surface-secondary rounded-lg flex items-center justify-center">
-                  <span className="text-text-primary font-bold text-lg">R</span>
+                <div className="w-8 h-8 bg-surface-primary rounded-lg flex items-center justify-center overflow-hidden">
+                  <Image
+                    src="/favicon.ico"
+                    alt="Rafael Felix"
+                    width={24}
+                    height={24}
+                    className="w-6 h-6 object-contain"
+                  />
                 </div>
                 <span className="font-bold text-xl text-text-primary">
                   Rafael Felix
@@ -40,7 +47,7 @@ export const Footer: React.FC = () => {
                   href="/work" 
                   className="text-sm text-text-secondary hover:text-text-primary transition-colors duration-200"
                 >
-                  Work
+                  Portfolio
                 </Link>
                 <Link 
                   href="/research" 

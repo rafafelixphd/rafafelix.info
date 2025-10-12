@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { navigationItems } from '@/lib/data';
 import { cn } from '@/lib/utils';
@@ -16,6 +17,21 @@ export const Header: React.FC = () => {
 
   return (
     <>
+      {/* Floating Logo */}
+      <Link 
+        href="/" 
+        className="fixed top-4 left-4 z-50 w-16 h-16 rounded-full bg-surface-primary hover:bg-surface-secondary transition-colors duration-200 shadow-lg flex items-center justify-center overflow-hidden"
+        aria-label="Go to homepage"
+      >
+        <Image
+          src="/images/favicon.png"
+          alt="Rafael Felix"
+          width={48}
+          height={48}
+          className="w-10 h-10 object-contain"
+        />
+      </Link>
+
       {/* Floating Menu Button */}
       <button
         onClick={toggleMenu}
