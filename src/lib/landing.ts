@@ -201,6 +201,22 @@ export const landingContent: LandingData = {
       outcome:
         "Faster, safer decisions with fewer false starts — and a strategy you can defend to investors and your team.",
       ctaText: "Apply for Coaching"
+    },
+    {
+      id: "career-mentorship",
+      title: "AI Career Mentorship",
+      duration: "Monthly · 1:1 or Group Sessions",
+      description:
+        "For researchers, engineers, and students seeking clarity on their AI career path — from academia to industry, or from contributor to leader.",
+      deliverables: [
+        "Personalized roadmap to align your skills with market demand",
+        "Portfolio and publication review for professional positioning",
+        "Mock interviews and feedback for FAANG and research roles",
+        "Strategies for networking, visibility, and thought leadership"
+      ],
+      outcome:
+        "A clear, confident path forward — with measurable growth goals and direct feedback from someone who’s lived both research and product sides of AI.",
+      ctaText: "Start Mentorship"
     }
   ],
   results: {
@@ -318,7 +334,6 @@ export const landingContent: LandingData = {
         "Understand compute, data, and human-in-the-loop costs — and how to build sustainable AI economics."
     }
   ],
-  
   testimonials: [
     {
       id: "john-smith",

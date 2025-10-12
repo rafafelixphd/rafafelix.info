@@ -2,7 +2,7 @@
 
 import { Collaboration } from '@/lib/landing';
 import Image from 'next/image';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 interface LandingCollaborationsProps {
   data: Collaboration[];
@@ -14,54 +14,64 @@ export default function LandingCollaborations({ data }: LandingCollaborationsPro
   const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 });
   const containerRef = useRef<HTMLDivElement>(null);
 
+  // Initialize positions once on mount
+  useEffect(() => {
+    const initialPositions: { [key: string]: { x: number; y: number } } = {};
+    
+    data.forEach((collaboration, index) => {
+      const key = collaboration.id;
+      if (!initialPositions[key]) {
+        let position = generateRandomPosition();
+        
+        // Simple collision detection
+        const minDistance = 18;
+        let attempts = 0;
+        while (attempts < 50) {
+          let tooClose = false;
+          for (let i = 0; i < index; i++) {
+            const existingPos = initialPositions[data[i].id];
+            if (existingPos) {
+              const distance = Math.sqrt(
+                Math.pow(position.x - existingPos.x, 2) + 
+                Math.pow(position.y - existingPos.y, 2)
+              );
+              if (distance < minDistance) {
+                tooClose = true;
+                break;
+              }
+            }
+          }
+          if (!tooClose) break;
+          position = generateRandomPosition();
+          attempts++;
+        }
+        
+        // Fallback grid position
+        if (attempts >= 50) {
+          const gridPositions = [
+            { x: 20, y: 20 }, { x: 40, y: 20 }, { x: 60, y: 20 }, { x: 80, y: 20 },
+            { x: 20, y: 40 }, { x: 40, y: 40 }, { x: 60, y: 40 }, { x: 80, y: 40 },
+            { x: 20, y: 60 }, { x: 40, y: 60 }, { x: 60, y: 60 }, { x: 80, y: 60 },
+            { x: 20, y: 80 }, { x: 40, y: 80 }, { x: 60, y: 80 }, { x: 80, y: 80 }
+          ];
+          position = gridPositions[index % gridPositions.length];
+        }
+        
+        initialPositions[key] = position;
+      }
+    });
+    
+    setPositions(initialPositions);
+  }, [data]);
+
   const generateRandomPosition = () => {
     const x = Math.random() * 70 + 15; // 15% to 85% of width
     const y = Math.random() * 70 + 15; // 15% to 85% of height
     return { x, y };
   };
 
-  const getPosition = (index: number, collaboration: Collaboration) => {
-    const key = collaboration.id;
-    if (positions[key]) return positions[key];
-    
-    let position = generateRandomPosition();
-    
-    // Enhanced collision detection - avoid recursion
-    const minDistance = 18;
-    let attempts = 0;
-    while (attempts < 50) {
-      let tooClose = false;
-      for (let i = 0; i < index; i++) {
-        const existingPos = positions[data[i].id];
-        if (existingPos) {
-          const distance = Math.sqrt(
-            Math.pow(position.x - existingPos.x, 2) + 
-            Math.pow(position.y - existingPos.y, 2)
-          );
-          if (distance < minDistance) {
-            tooClose = true;
-            break;
-          }
-        }
-      }
-      if (!tooClose) break;
-      position = generateRandomPosition();
-      attempts++;
-    }
-    
-    // Fallback grid position
-    if (attempts >= 50) {
-      const gridPositions = [
-        { x: 20, y: 20 }, { x: 40, y: 20 }, { x: 60, y: 20 }, { x: 80, y: 20 },
-        { x: 20, y: 40 }, { x: 40, y: 40 }, { x: 60, y: 40 }, { x: 80, y: 40 },
-        { x: 20, y: 60 }, { x: 40, y: 60 }, { x: 60, y: 60 }, { x: 80, y: 60 },
-        { x: 20, y: 80 }, { x: 40, y: 80 }, { x: 60, y: 80 }, { x: 80, y: 80 }
-      ];
-      position = gridPositions[index % gridPositions.length];
-    }
-    
-    setPositions(prev => ({ ...prev, [key]: position }));
-    return position;
+  const getPosition = (collaboration: Collaboration) => {
+    return positions[collaboration.id] || { x: 50, y: 50 };
   };
 
   const handleMouseDown = (e: React.MouseEvent, collaborationId: string) => {
@@ -100,8 +110,24 @@ export default function LandingCollaborations({ data }: LandingCollaborationsPro
     setDragOffset({ x: 0, y: 0 });
   };
   return (
-    <section className="py-24">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-24 relative">
+      {/* Full Page Width Neural Network Background */}
+      <div className="absolute inset-0 w-full h-full">
+        <Image
+          src="/images/landing/neural-net-background.webp"
+          alt="Neural network background"
+          fill
+          className="object-cover opacity-50"
+          priority={false}
+        />
+        {/* Gradient overlay to blend with page background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-surface-primary/10 via-transparent to-surface-primary/20"></div>
+        {/* Subtle pattern overlay for texture */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.05)_0%,transparent_50%)] opacity-40"></div>
+      </div>
+
+      {/* Content Container */}
+      <div className="relative z-10 max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-text-primary mb-6">
             Trusted by Leading Organizations
@@ -114,17 +140,15 @@ export default function LandingCollaborations({ data }: LandingCollaborationsPro
         {/* Neural Network Visualization */}
         <div 
           ref={containerRef}
-          className="relative w-full h-[600px] bg-surface-primary/5 backdrop-blur-sm rounded-2xl overflow-hidden"
+          className="relative w-full h-[600px]"
           onMouseMove={handleMouseMove}
           onMouseUp={handleMouseUp}
           onMouseLeave={handleMouseUp}
         >
-
-          
           {/* Organization Nodes */}
           <div className="relative w-full h-full">
             {data.map((collaboration, index) => {
-              const position = getPosition(index, collaboration);
+              const position = getPosition(collaboration);
               
               return (
                 <div

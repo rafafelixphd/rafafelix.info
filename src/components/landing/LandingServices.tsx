@@ -17,42 +17,42 @@ export default function LandingServices({ data }: LandingServicesProps) {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {data.map((service) => (
-            <div key={service.id} className="bg-surface-primary/50 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-border-secondary overflow-hidden group">
-              <div className="p-8">
-                <div className="mb-4">
-                  <h3 className="text-2xl font-bold text-text-primary mb-2">
+            <div key={service.id} className="bg-surface-primary/50 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-border-secondary overflow-hidden group">
+              <div className="p-6">
+                <div className="mb-3">
+                  <h3 className="text-xl font-bold text-text-primary mb-1">
                     {service.title}
                   </h3>
-                  <p className="text-sm text-interactive-tertiary font-medium">
+                  <p className="text-xs text-interactive-tertiary font-medium">
                     {service.duration}
                   </p>
                 </div>
                 
-                <p className="text-text-secondary mb-6 leading-relaxed">
+                <p className="text-text-secondary mb-4 leading-relaxed text-sm">
                   {service.description}
                 </p>
                 
-                <div className="mb-6">
-                  <h4 className="font-semibold text-text-primary mb-3">Deliverables:</h4>
-                  <ul className="space-y-2">
+                <div className="mb-4">
+                  <h4 className="font-semibold text-text-primary mb-2 text-sm">Deliverables:</h4>
+                  <ul className="space-y-1">
                     {service.deliverables.map((deliverable, index) => (
-                      <li key={index} className="flex items-center space-x-2 text-sm text-text-secondary">
-                        <div className="w-1.5 h-1.5 bg-interactive-tertiary rounded-full"></div>
+                      <li key={index} className="flex items-center space-x-2 text-xs text-text-secondary">
+                        <div className="w-1 h-1 bg-interactive-tertiary rounded-full"></div>
                         <span>{deliverable}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
                 
-                <div className="mb-6 p-4 bg-surface-secondary/20 rounded-lg border border-border-secondary">
-                  <p className="text-sm font-medium text-text-primary">
+                <div className="mb-4 p-3 bg-surface-secondary/20 rounded-lg border border-border-secondary">
+                  <p className="text-xs font-medium text-text-primary">
                     <strong>Outcome:</strong> {service.outcome}
                   </p>
                 </div>
                 
-                <button className="w-full bg-surface-secondary text-text-primary py-3 rounded-lg font-semibold hover:bg-interactive-secondary transition-colors group-hover:scale-105 transform duration-200">
+                <button className="w-full bg-gradient-to-r from-surface-secondary to-surface-secondary/80 text-text-primary py-3 rounded-lg font-semibold hover:from-interactive-secondary hover:to-interactive-secondary/80 transition-all duration-300 group-hover:scale-105 transform shadow-md hover:shadow-lg border border-border-secondary/20 hover:border-interactive-tertiary/30 text-sm">
                   {service.ctaText} →
                 </button>
               </div>
