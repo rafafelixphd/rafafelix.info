@@ -14,7 +14,7 @@ export function BaseLayout({ children, className = '' }: BaseLayoutProps) {
       {/* Global Background Image */}
       <div className="fixed inset-0 opacity-5 pointer-events-none z-0">
         <Image
-          src="/images/assets_task_01k7b1r2v6ezmbw7gjn1mq1gpe_1760233852_img_1.webp"
+          src="/images/background.webp"
           alt="Background pattern"
           fill
           className="object-cover"

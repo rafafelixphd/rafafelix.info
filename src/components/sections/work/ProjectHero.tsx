@@ -6,6 +6,7 @@ import { Project } from '@/models/types';
 import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
 import { Section } from '@/components/ui/Section';
+import { ProjectOutcomes } from '@/components/ui/ProjectOutcomes';
 
 interface ProjectHeroProps {
   project: Project;
@@ -259,7 +260,7 @@ export function ProjectHero({ project }: ProjectHeroProps) {
             {/* Illustration */}
             <div className="relative">
               <Image
-                src={project.images?.[0] || "/images/assets_task_01k7b1r2v6ezmbw7gjn1mq1gpe_1760233852_img_1.webp"}
+                src={project.images?.[0] || "/images/background.webp"}
                 alt={project.title}
                 width={600}
                 height={400}
@@ -268,27 +269,23 @@ export function ProjectHero({ project }: ProjectHeroProps) {
               />
             </div>
 
-            {/* BLUF Project Overview */}
+            {/* Project Overview */}
             <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Project overview: {project.title}</h3>
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Project Overview</h3>
               
-              {/* Key Results */}
-              {project.outcomes && project.outcomes.length > 0 && (
-                <div className="space-y-3">
-                  {project.outcomes.slice(0, 3).map((outcome, index) => (
-                    <div key={index} className="flex items-start space-x-3">
-                      <div className="w-5 h-5 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <span className="text-primary-600 dark:text-primary-400 text-xs font-bold">
-                          {index + 1}
-                        </span>
-                      </div>
-                      <span className="text-sm text-gray-700 dark:text-gray-300 font-medium">
-                        {outcome}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              )}
+              {/* Short Description */}
+              <div className="mb-6">
+                <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                  {project.description}
+                </p>
+              </div>
+              
+              {/* Interactive Key Outcomes */}
+              <ProjectOutcomes 
+                outcomes={project.outcomes || []} 
+                title="Key Outcomes"
+                className="mt-6"
+              />
             </div>
           </div>
         </div>

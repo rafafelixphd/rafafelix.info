@@ -1,21 +1,45 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Container } from '@/components/ui/Container';
 import { Section } from '@/components/ui/Section';
-import { projects } from '@/lib/data';
+import { loadProjects } from '@/lib/projects';
 import { ProjectCard } from './ProjectCard';
+import { Project } from '@/models/types';
 
 export function WorkSection() {
-  const [selectedStatus, setSelectedStatus] = useState<string>('all');
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  const statuses = ['all', 'completed', 'in-progress', 'planned'];
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        const loadedProjects = await loadProjects();
+        setProjects(loadedProjects);
+      } catch (error) {
+        console.error('Error loading projects:', error);
+        setProjects([]);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  const filteredProjects = projects.filter((project) => {
-    const statusMatch = selectedStatus === 'all' || project.status === selectedStatus;
-    return statusMatch;
-  });
+    fetchProjects();
+  }, []);
+
+  if (loading) {
+    return (
+      <Section>
+        <Container>
+          <div className="text-center py-12">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600 mx-auto mb-4"></div>
+            <p className="text-text-secondary">Loading projects...</p>
+          </div>
+        </Container>
+      </Section>
+    );
+  }
 
   return (
     <>
@@ -47,42 +71,14 @@ export function WorkSection() {
         </Container>
       </Section>
 
-      {/* Filters */}
+      {/* Projects Grid */}
       <Section>
         <Container>
-          <div className="flex flex-col md:flex-row gap-4 justify-center items-center mb-12">
-            <div className="flex flex-wrap gap-2">
-              <span className="text-sm font-medium text-secondary-700 dark:text-secondary-300 mr-2">Status:</span>
-              {statuses.map((status) => (
-                <button
-                  key={status}
-                  onClick={() => setSelectedStatus(status)}
-                  className={`px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200 ${
-                    selectedStatus === status
-                      ? 'bg-primary-600 text-white'
-                      : 'bg-secondary-100 dark:bg-secondary-800 text-secondary-700 dark:text-secondary-300 hover:bg-primary-100 dark:hover:bg-primary-900'
-                  }`}
-                >
-                  {status === 'all' ? 'All' : status.charAt(0).toUpperCase() + status.slice(1).replace('-', ' ')}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {/* Projects Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProjects.map((project) => (
+            {projects.map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}
           </div>
-
-          {filteredProjects.length === 0 && (
-            <div className="text-center py-12">
-              <p className="text-secondary-600 dark:text-secondary-400">
-                No projects found matching the selected filters.
-              </p>
-            </div>
-          )}
         </Container>
       </Section>
 

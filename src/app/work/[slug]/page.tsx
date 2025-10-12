@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import { BaseLayout } from '@/components/layout/BaseLayout';
-import { projects } from '@/lib/data';
+import { getProjects } from '@/lib/projects';
 import { ProjectHero } from '@/components/sections/work/ProjectHero';
 
 interface ProjectPageProps {
@@ -10,6 +10,7 @@ interface ProjectPageProps {
 }
 
 export async function generateStaticParams() {
+  const projects = getProjects();
   return projects.map((project) => ({
     slug: project.id,
   }));
@@ -17,6 +18,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: ProjectPageProps) {
   const { slug } = await params;
+  const projects = getProjects();
   const project = projects.find((p) => p.id === slug);
   
   if (!project) {
@@ -33,6 +35,7 @@ export async function generateMetadata({ params }: ProjectPageProps) {
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
   const { slug } = await params;
+  const projects = getProjects();
   const project = projects.find((p) => p.id === slug);
 
   if (!project) {

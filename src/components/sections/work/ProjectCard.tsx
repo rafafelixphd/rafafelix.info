@@ -9,19 +9,6 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project }: ProjectCardProps) {
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'completed':
-        return 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300';
-      case 'in-progress':
-        return 'bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300';
-      case 'planned':
-        return 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300';
-      default:
-        return 'bg-secondary-100 text-secondary-700 dark:bg-secondary-900 dark:text-secondary-300';
-    }
-  };
-
 
   return (
     <Link href={`/work/${project.id}`} className="group block">
@@ -29,7 +16,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src={project.images?.[0] || "/images/assets_task_01k7b1r2v6ezmbw7gjn1mq1gpe_1760233852_img_1.webp"}
+            src={project.images?.[0] || "/images/background.webp"}
             alt={project.title}
             fill
             className="object-cover transition-transform duration-300 group-hover:scale-110 opacity-40"
@@ -43,17 +30,6 @@ export function ProjectCard({ project }: ProjectCardProps) {
         <div className="absolute bottom-0 left-0 right-0 p-6">
           <div className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-white/20 dark:border-gray-700/20">
             {/* Status and Category Tags */}
-            <div className="flex items-center space-x-2 mb-3">
-              <span className={`px-2 py-1 text-xs font-medium rounded-full ${getStatusColor(project.status)}`}>
-                {project.status.replace('-', ' ')}
-              </span>
-              {project.featured && (
-                <span className="px-2 py-1 bg-accent-500 text-white text-xs font-medium rounded-full">
-                  Featured
-                </span>
-              )}
-            </div>
-
             {/* Project Title */}
             <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2 line-clamp-2">
               {project.title}

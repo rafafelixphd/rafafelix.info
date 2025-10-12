@@ -1,0 +1,42 @@
+{
+  "id": "poc-gaze-dataset-collection",
+  "title": "Global Data Collection for Point-of-Gaze Estimation",
+  "description": "Orchestrated a global data collection campaign using Amazon Mechanical Turk to build a large-scale, high-quality dataset for gaze estimation on desktop and mobile devices.",
+  "longDescription": "This project focused on constructing a robust, real-world dataset for training a Point-of-Gaze (PoG) estimation model in record time. The initiative required coordinating large-scale data collection across multiple countries using Amazon Mechanical Turk (AMT), ensuring compliance, quality, and participant safety under varying regulations. By building custom web-based data capture interfaces, real-time validation scripts, and automated quality control filters, the team collected thousands of RGB samples covering diverse demographics and environmental conditions. The data pipeline was fully anonymized, version-controlled, and integrated into an ML workflow leveraging pre-trained backbones such as ResNet50 and MobileNet. Within three months, the dataset powered a production-ready PoG model with <30 mm error on desktop and mobile setups, expanding the organization's reach across international markets.",
+  "technologies": [
+    "Python",
+    "PyTorch",
+    "ResNet50",
+    "MobileNet",
+    "Flask",
+    "AWS",
+    "Amazon Mechanical Turk",
+    "Docker",
+    "GPU Training",
+    "Data Validation Pipelines"
+  ],
+  "status": "completed",
+  "featured": true,
+  "images": ["/images/illustrations/pog-dataset-collection.2.webp"],
+  "demoUrl": "",
+  "githubUrl": "",
+  "startDate": "2022-05-01",
+  "endDate": "2022-08-01",
+  "outcomes": [
+    "Built a global gaze dataset across 5+ regions using Amazon Mechanical Turk",
+    "Collected and validated thousands of RGB samples under privacy-safe protocols",
+    "Reduced expected error margin from 50 mm to <30 mm in desktop inference",
+    "Enabled $300K initial contract with expansion into new international markets",
+    "Delivered full project lifecycle within a three-month timeline"
+  ],
+  "challenge": "Creating a reliable, large-scale dataset for gaze estimation under a three-month timeline required orchestrating crowd-based data collection while maintaining participant privacy, regional compliance, and quality control. Achieving uniform accuracy across devices and demographics added further complexity.",
+  "solution": "Designed and deployed an AMT-based data collection pipeline with embedded safety filters and validation scripts to guarantee data integrity. Implemented real-time feedback loops to reject low-quality submissions and ensure accurate labeling. Combined this data with a CNN architecture using pre-trained ResNet50 and MobileNet backbones, optimized via GPU-accelerated training with custom loss functions to mitigate overfitting.",
+  "results": "Delivered a comprehensive, regulation-compliant dataset powering a production-grade PoG model with <30 mm average error. Enabled entry into new markets across the UK, Ireland, and streaming platforms, securing $300K+ in contracts. Demonstrated how rapid dataset development can scale both technical and business impact simultaneously.",
+  "technicalHighlights": [
+    "Deployed large-scale AMT data collection across multiple countries and demographics",
+    "Developed automated validation scripts ensuring dataset consistency and participant safety",
+    "Integrated privacy-preserving data labeling and anonymization at ingestion",
+    "Built GPU-accelerated training pipeline leveraging pre-trained CNN backbones",
+    "Achieved <30 mm PoG accuracy under three-month development constraint"
+  ]
+}

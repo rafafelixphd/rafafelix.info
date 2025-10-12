@@ -1,0 +1,40 @@
+{
+  "id": "global-data-collection-compliance",
+  "title": "Global Data Collection and Compliance Framework",
+  "description": "Designed and deployed large-scale, privacy-compliant data collection pipelines across multiple regions, aligning AI development with local regulations and ethical standards.",
+  "longDescription": "This project established a global framework for gathering and managing multimodal data for AI training under strict privacy, legal, and cultural constraints. The system integrated automated anonymization, metadata labeling, and regional access control to ensure datasets met the standards of each jurisdiction. By aligning engineering, policy, and ethics from the outset, the initiative enabled secure expansion of training datasets across continents while maintaining public trust and compliance readiness. The resulting data infrastructure now serves as a blueprint for scalable, regulation-aware AI research pipelines.",
+  "technologies": [
+    "Python",
+    "Kubernetes",
+    "AWS",
+    "GCP",
+    "PostgreSQL",
+    "Kafka",
+    "Data Labeling Tools",
+    "Compliance APIs"
+  ],
+  "status": "completed",
+  "featured": true,
+  "images": ["/images/illustrations/global-data-compliance.webp"],
+  "demoUrl": "",
+  "githubUrl": "",
+  "startDate": "2023-05-01",
+  "endDate": "2024-08-30",
+  "outcomes": [
+    "Deployed privacy-safe data pipelines across 16 countries",
+    "Integrated automated anonymization and audit logging",
+    "Enabled compliant dataset growth by 5K new subjects weekly",
+    "Reduced manual verification time by 40% via smart workflows",
+    "Set new internal benchmark for regulation-aligned data handling"
+  ],
+  "challenge": "Collecting human-centered AI data across international boundaries poses unique challenges: each region enforces distinct privacy laws, age restrictions, and cultural norms. Building a unified pipeline that respects local regulation while sustaining data quality and scale was essential for responsible AI development.",
+  "solution": "Implemented a modular, cloud-based data collection framework with built-in compliance verification. Automated labeling workflows and anonymization layers were integrated into ingestion pipelines, ensuring regional separation and auditability. Collaborated with legal and ethics teams to map data schemas to jurisdictional policies, allowing continuous dataset expansion without breaching privacy or fairness standards.",
+  "results": "Delivered a scalable, regulation-aware data collection ecosystem operating across 16 regions. Accelerated annotation throughput by 40% while maintaining full compliance and traceability. This work established a practical model for globally responsible AI data infrastructure.",
+  "technicalHighlights": [
+    "Developed multi-region ingestion pipelines with automated compliance checks",
+    "Integrated anonymization and metadata tagging into real-time data streams",
+    "Used Kubernetes and Kafka for distributed scalability and event logging",
+    "Designed regional data partitions respecting jurisdictional boundaries",
+    "Aligned operational workflows with GDPR, COPPA, and local privacy frameworks"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "id": "out-of-home-attention-detection",
+  "title": "Out-of-Home Attention Detection",
+  "description": "Built the first 3D pedestrian attention framework linking pose, gaze, and epipolar geometry — achieving 85% F1-score and real-time 4K inference across live environments.",
+  "longDescription": "This project pioneered a multimodal framework for understanding human attention in real-world, outdoor contexts. By combining 3D pose estimation, pedestrian detection, and epipolar geometry, the system could infer where and when people direct their attention within public spaces. Designed for large-scale deployments, it processed 4K video streams in real time and correlated spatial engagement with environmental factors such as lighting, distance, and crowd density. The result was a high-fidelity representation of human focus in motion — transforming how audience analytics and safety monitoring can be done ethically, accurately, and at scale.",
+  "technologies": [
+    "Python",
+    "PyTorch",
+    "OpenCV",
+    "TensorRT",
+    "TFLite",
+    "Epipolar Geometry",
+    "Pose Estimation",
+    "3D Reconstruction"
+  ],
+  "status": "completed",
+  "featured": true,
+  "images": ["/images/illustrations/out_of_home_attention.webp"],
+  "demoUrl": "",
+  "githubUrl": "",
+  "startDate": "2022-08-01",
+  "endDate": "2024-02-28",
+  "outcomes": [
+    "Achieved 85% F1-score in real-world pedestrian attention detection",
+    "Processed 4K streams in real time at 360 MB/s throughput",
+    "Sustained 8K QPS on scalable CPU infrastructure",
+    "Enabled accurate, privacy-safe outdoor engagement analytics",
+    "Bridged 3D spatial reasoning with real-time perception pipelines"
+  ],
+  "challenge": "Understanding real-world human attention requires integrating spatial geometry, motion, and gaze under dynamic lighting and scale conditions. Traditional gaze models fail in outdoor environments with multiple people and variable camera angles, making reliable measurement extremely difficult.",
+  "solution": "Developed a multimodal pipeline that fuses 3D pose estimation, pedestrian detection, and gaze projection through epipolar geometry. Implemented 4K real-time inference using TFLite and TensorRT across distributed CPU clusters. Designed the system to remain privacy-safe, ensuring no personal identity data was stored while maintaining high accuracy for attention metrics.",
+  "results": "Delivered the first production-ready system capable of quantifying attention across outdoor settings in real time. The model's 85% F1-score and scalable throughput redefined what's achievable in spatial analytics, setting a new benchmark for multimodal perception at city scale.",
+  "technicalHighlights": [
+    "Integrated pose, gaze, and epipolar geometry for 3D spatial attention reasoning",
+    "Designed real-time 4K video processing pipeline achieving 360 MB/s throughput",
+    "Deployed at 8K QPS on stateless CPU infrastructure with automated scaling",
+    "Implemented privacy-safe feature extraction to anonymize real-world observations",
+    "Combined multimodal embeddings for robust outdoor attention tracking"
+  ]
+}

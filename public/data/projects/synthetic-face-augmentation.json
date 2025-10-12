@@ -1,0 +1,39 @@
+{
+  "id": "synthetic-face-augmentation",
+  "title": "Synthetic Face Augmentation for Fair Age Estimation",
+  "description": "Used diffusion-based generative models to create diverse, policy-compliant face data for age estimation, improving fairness and reducing bias across demographic regions.",
+  "longDescription": "This project tackled the challenge of demographic imbalance and privacy restrictions in face datasets used for age estimation. In many regions, collecting and storing real human faces is constrained by local regulation. To bridge these gaps, diffusion-based generative models were leveraged to synthesize high-quality, photorealistic samples representing under-represented age groups and facial features. The synthetic data seamlessly integrated with existing pipelines, expanding diversity while remaining privacy-safe. The result was a measurable improvement in fairness and model robustness across global deployments.",
+  "technologies": [
+    "Python",
+    "PyTorch",
+    "Diffusion Models",
+    "GANs",
+    "CUDA",
+    "TensorRT",
+    "Data Augmentation"
+  ],
+  "status": "completed",
+  "featured": true,
+  "images": ["/images/illustrations/synthetic-face-augmentation.webp"],
+  "demoUrl": "",
+  "githubUrl": "",
+  "startDate": "2023-03-01",
+  "endDate": "2024-05-30",
+  "outcomes": [
+    "Expanded demographic diversity without collecting new personal data",
+    "Enhanced fairness and robustness of age estimation models",
+    "Reduced dependency on sensitive face datasets by 60%",
+    "Maintained regulatory compliance across 16 jurisdictions",
+    "Established internal framework for safe synthetic data generation"
+  ],
+  "challenge": "Real facial datasets are often limited by regional privacy laws and demographic imbalance, leading to biased age estimations and compliance risks. Expanding dataset diversity while maintaining data protection was a critical challenge for scaling global safety applications.",
+  "solution": "Developed a diffusion-based generative framework to synthesize photorealistic, demographically balanced face data that preserves diversity without storing personal information. Combined synthetic and real samples to fine-tune existing models, improving fairness and resilience while adhering to privacy and age-restriction laws.",
+  "results": "Improved fairness and cross-region performance of age estimation models, increasing accuracy for under-represented demographics. Reduced reliance on personally identifiable data and established a scalable, compliant data augmentation standard adopted across multiple projects.",
+  "technicalHighlights": [
+    "Trained diffusion models to generate diverse, photorealistic facial features for multiple age groups",
+    "Balanced age and demographic distribution via synthetic data mixing strategies",
+    "Integrated generative augmentation directly into model fine-tuning workflows",
+    "Improved cross-domain robustness without increasing inference complexity",
+    "Aligned data synthesis process with international privacy and fairness guidelines"
+  ]
+}

@@ -1,6 +1,6 @@
 import { ProfileData, SocialLink, Publication } from '@/models/types';
 import { FloatingCardData } from '@/components/ui/FloatingCard';
-import { projects } from './projects';
+import { getProjects } from './projects';
 
 // Site-wide constants
 export const siteConfig = {
@@ -147,7 +147,8 @@ export const socialLinks: SocialLink[] = [
 ];
 
 // Export projects from separate file
-export { projects };
+// Note: This will be empty on client-side until projects are loaded
+export const projects = getProjects();
 
 export const floatingCards: FloatingCardData[] = [
   {
