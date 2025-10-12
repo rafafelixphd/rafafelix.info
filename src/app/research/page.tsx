@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
 import { Section } from '@/components/ui/Section';
 import { Card, CardContent, CardHeader } from '@/components/ui/Card';
+import { BaseLayout } from '@/components/layout/BaseLayout';
 import { publications } from '@/lib/data';
 import { Publication } from '@/models/types';
 
@@ -77,20 +78,10 @@ export default function ResearchPage() {
   }
 
   return (
-    <>
+    <BaseLayout>
       {/* Hero Section */}
-             <Section className="bg-background-primary relative overflow-hidden">
-               {/* Background Image */}
-               <div className="absolute inset-0 opacity-10">
-                 <Image
-                   src="/images/assets_task_01k7b1r2v6ezmbw7gjn1mq1gpe_1760233852_img_1.webp"
-                   alt="Background pattern"
-                   fill
-                   className="object-cover"
-                   priority
-                 />
-               </div>
-        <Container className="relative z-10">
+      <Section>
+        <Container>
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold text-text-primary mb-6">
               Research &{' '}
@@ -121,17 +112,8 @@ export default function ResearchPage() {
       </Section>
 
       {/* Research Areas */}
-      <Section className="relative overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0 opacity-10">
-          <Image
-            src="/images/assets_task_01k7b1r2v6ezmbw7gjn1mq1gpe_1760233852_img_1.webp"
-            alt="Background pattern"
-            fill
-            className="object-cover"
-          />
-        </div>
-        <Container className="relative z-10">
+      <Section>
+        <Container>
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 dark:text-white mb-4">
               Research Areas
@@ -399,6 +381,6 @@ export default function ResearchPage() {
           </div>
         </Container>
       </Section>
-    </>
+    </BaseLayout>
   );
 }

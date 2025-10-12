@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
 import { Section } from '@/components/ui/Section';
 import { SocialLinks } from '@/components/ui/SocialLinks';
+import { BaseLayout } from '@/components/layout/BaseLayout';
 import { profileData, socialLinks } from '@/lib/data';
 
 export const metadata = {
@@ -13,20 +14,10 @@ export const metadata = {
 
 export default function ConnectPage() {
   return (
-    <>
+    <BaseLayout>
       {/* Hero Section */}
-      <Section className="bg-background-primary relative overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0 opacity-10">
-          <Image
-            src="/images/assets_task_01k7b1r2v6ezmbw7gjn1mq1gpe_1760233852_img_1.webp"
-            alt="Background pattern"
-            fill
-            className="object-cover"
-            priority
-          />
-        </div>
-        <Container className="relative z-10">
+      <Section>
+        <Container>
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold text-text-primary mb-6">
               Let's{' '}
@@ -42,17 +33,8 @@ export default function ConnectPage() {
       </Section>
 
       {/* Social Links */}
-      <Section className="relative overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0 opacity-10">
-          <Image
-            src="/images/assets_task_01k7b1r2v6ezmbw7gjn1mq1gpe_1760233852_img_1.webp"
-            alt="Background pattern"
-            fill
-            className="object-cover"
-          />
-        </div>
-        <Container className="relative z-10">
+      <Section>
+        <Container>
           <div className="text-center mb-8">
             <h2 className="text-2xl md:text-3xl font-bold text-text-primary mb-3">
               Connect With Me
@@ -121,6 +103,6 @@ export default function ConnectPage() {
           </div>
         </Container>
       </Section>
-    </>
+    </BaseLayout>
   );
 }

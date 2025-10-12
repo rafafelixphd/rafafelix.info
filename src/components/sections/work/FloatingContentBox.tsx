@@ -1,6 +1,7 @@
 'use client';
 
 import { ReactNode } from 'react';
+import { cn } from '@/lib/utils';
 
 interface FloatingContentBoxProps {
   children: ReactNode;
@@ -48,12 +49,12 @@ export function FloatingContentBox({
   };
 
   return (
-    <div className={`absolute ${getPositionClasses()} ${className}`}>
-      <div className={`
+    <div className={cn(`absolute ${getPositionClasses()}`, className)}>
+      <div className={cn(`
         ${getVariantClasses()}
         backdrop-blur-sm rounded-xl p-6 shadow-2xl border max-w-md
         transition-all duration-300 hover:shadow-3xl hover:scale-105
-      `}>
+      `)}>
         {children}
       </div>
     </div>

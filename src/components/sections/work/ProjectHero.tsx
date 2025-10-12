@@ -3,20 +3,18 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Project } from '@/models/types';
-import { FloatingContentBox } from './FloatingContentBox';
 import { Button } from '@/components/ui/Button';
+import { Container } from '@/components/ui/Container';
+import { Section } from '@/components/ui/Section';
 
 interface ProjectHeroProps {
   project: Project;
 }
 
 export function ProjectHero({ project }: ProjectHeroProps) {
-
-
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Content Container */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6">
+    <Section className="min-h-screen flex items-center justify-center">
+      <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Side - Content */}
           <div className="space-y-8">
@@ -142,8 +140,7 @@ export function ProjectHero({ project }: ProjectHeroProps) {
             </div>
           </div>
         </div>
-      </div>
-
-    </section>
+      </Container>
+    </Section>
   );
 }

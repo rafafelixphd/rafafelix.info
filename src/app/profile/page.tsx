@@ -6,6 +6,7 @@ import { Section } from '@/components/ui/Section';
 import { Card, CardContent, CardHeader } from '@/components/ui/Card';
 import { Skills } from '@/components/ui/Skills';
 import { FloatingCardsContainer } from '@/components/ui/FloatingCard';
+import { BaseLayout } from '@/components/layout/BaseLayout';
 import { profileData, floatingCards } from '@/lib/data';
 
 export const metadata = {
@@ -15,20 +16,10 @@ export const metadata = {
 
 export default function ProfilePage() {
   return (
-    <>
+    <BaseLayout>
       {/* Hero Section */}
-      <Section className="bg-background-primary relative overflow-hidden">
-               {/* Background Image */}
-               <div className="absolute inset-0 opacity-10">
-                 <Image
-                   src="/images/assets_task_01k7b1r2v6ezmbw7gjn1mq1gpe_1760233852_img_1.webp"
-                   alt="Background pattern"
-                   fill
-                   className="object-cover"
-                   priority
-                 />
-               </div>
-        <Container className="relative z-10">
+      <Section>
+        <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <div className="space-y-4">
@@ -75,17 +66,8 @@ export default function ProfilePage() {
       </Section>
 
       {/* Bio Section */}
-      <Section className="relative overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0 opacity-10">
-          <Image
-            src="/images/assets_task_01k7b1r2v6ezmbw7gjn1mq1gpe_1760233852_img_1.webp"
-            alt="Background pattern"
-            fill
-            className="object-cover"
-          />
-        </div>
-        <Container className="relative z-10">
+      <Section>
+        <Container>
           <div className="max-w-4xl mx-auto">
             <Card>
               <CardHeader>
@@ -222,6 +204,6 @@ export default function ProfilePage() {
           </div>
         </Container>
       </Section>
-    </>
+    </BaseLayout>
   );
 }
