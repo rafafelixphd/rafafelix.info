@@ -15,8 +15,18 @@ export default function ProfilePage() {
   return (
     <>
       {/* Hero Section */}
-      <Section className="bg-background-primary">
-        <Container>
+             <Section className="bg-background-primary relative overflow-hidden">
+               {/* Background Image */}
+               <div className="absolute inset-0 opacity-10">
+                 <Image
+                   src="/images/assets_task_01k7b1r2v6ezmbw7gjn1mq1gpe_1760233852_img_1.webp"
+                   alt="Background pattern"
+                   fill
+                   className="object-cover"
+                   priority
+                 />
+               </div>
+        <Container className="relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <div className="space-y-4">
@@ -63,8 +73,17 @@ export default function ProfilePage() {
       </Section>
 
       {/* Bio Section */}
-      <Section>
-        <Container>
+      <Section className="relative overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 opacity-10">
+          <Image
+            src="/images/assets_task_01k7b1r2v6ezmbw7gjn1mq1gpe_1760233852_img_1.webp"
+            alt="Background pattern"
+            fill
+            className="object-cover"
+          />
+        </div>
+        <Container className="relative z-10">
           <div className="max-w-4xl mx-auto">
             <Card>
               <CardHeader>

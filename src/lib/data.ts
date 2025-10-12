@@ -9,6 +9,11 @@ export const profileData: ProfileData = {
   phone: "+1 (555) 123-4567",
   profileImage: "/images/profile.png",
   resumeUrl: "/documents/resume.pdf",
+  linkedinUrl: "https://www.linkedin.com/in/rafafelixphd",
+  githubUrl: "https://github.com/rfelixmg",
+  twitterUrl: "https://x.com/rafafelixphd",
+  googleScholarUrl: "https://scholar.google.com.au/citations?hl=en&user=nijDcmQAAAAJ",
+  instagramUrl: "https://www.instagram.com/rafafelix.phd/",
   skills: [
     "JavaScript", "TypeScript", "React", "Next.js", "Node.js",
     "Python", "Machine Learning", "Data Science", "AWS", "Docker",
@@ -23,21 +28,33 @@ export const profileData: ProfileData = {
 export const socialLinks: SocialLink[] = [
   {
     platform: "LinkedIn",
-    url: "https://linkedin.com/in/rafafelix",
+    url: "https://www.linkedin.com/in/rafafelixphd",
     icon: "linkedin",
     label: "Connect on LinkedIn"
   },
   {
     platform: "GitHub",
-    url: "https://github.com/rafafelix",
+    url: "https://github.com/rfelixmg",
     icon: "github",
     label: "View my code on GitHub"
   },
   {
     platform: "X (Twitter)",
-    url: "https://x.com/rafafelix",
+    url: "https://x.com/rafafelixphd",
     icon: "twitter",
     label: "Follow me on X"
+  },
+  {
+    platform: "Google Scholar",
+    url: "https://scholar.google.com.au/citations?hl=en&user=nijDcmQAAAAJ",
+    icon: "scholar",
+    label: "View my publications"
+  },
+  {
+    platform: "Instagram",
+    url: "https://www.instagram.com/rafafelix.phd/",
+    icon: "instagram",
+    label: "Follow me on Instagram"
   },
   {
     platform: "Email",

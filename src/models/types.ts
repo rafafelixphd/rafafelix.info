@@ -7,6 +7,11 @@ export interface ProfileData {
   phone?: string;
   profileImage: string;
   resumeUrl?: string;
+  linkedinUrl?: string;
+  githubUrl?: string;
+  twitterUrl?: string;
+  googleScholarUrl?: string;
+  instagramUrl?: string;
   skills: string[];
   interests: string[];
 }

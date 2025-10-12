@@ -9,15 +9,25 @@ export default function HomePage() {
   return (
     <>
       {/* Business Card Inspired Homepage */}
-      <Section className="min-h-screen bg-background-primary flex items-center justify-center p-4">
-        <Container>
+               <Section className="min-h-screen bg-background-primary flex items-center justify-center p-4 relative overflow-hidden">
+                 {/* Background Image */}
+                 <div className="absolute inset-0 opacity-20">
+                   <Image
+                     src="/images/assets_task_01k7b1r2v6ezmbw7gjn1mq1gpe_1760233852_img_1.webp"
+                     alt="Background pattern"
+                     fill
+                     className="object-cover"
+                     priority
+                   />
+                 </div>
+        <Container className="relative z-10">
           <div className="max-w-xl mx-auto">
             {/* Main Business Card Container */}
-            <div className="bg-surface-primary rounded-2xl p-10 shadow-xl border border-border-secondary">
+            <div className="bg-surface-primary/95 backdrop-blur-sm rounded-2xl p-10 shadow-xl border border-border-secondary">
               <div className="text-center space-y-6">
                 {/* Profile Photo */}
                 <div className="flex justify-center">
-                  <div className="w-60 h-60 rounded-full overflow-hidden border-4 border-border-secondary shadow-lg">
+                  <div className="w-60 h- rounded-full overflow-hidden border-4 border-border-secondary shadow-lg">
                     <Image
                       src={profileData.profileImage}
                       alt={profileData.name}
