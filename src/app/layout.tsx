@@ -7,23 +7,23 @@ import { Footer } from '@/components/layout/Footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Rafael Felix - Software Engineer & Researcher',
-  description: 'Personal website of Rafael Felix, showcasing projects, research, and professional experience in software engineering and academic research.',
-  keywords: ['Rafael Felix', 'Software Engineer', 'Researcher', 'Web Development', 'Machine Learning', 'Portfolio'],
+  title: 'Rafael Felix - Research Scientist',
+  description: 'Personal website of Rafael Felix, Ph.D., Research Scientist specializing in multimodal AI for Trust & Safety and Robotics.',
+  keywords: ['Rafael Felix', 'Research Scientist', 'AI', 'Machine Learning', 'Multimodal AI', 'Robotics', 'Trust & Safety'],
   authors: [{ name: 'Rafael Felix' }],
   creator: 'Rafael Felix',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://rafafelix.info',
-    title: 'Rafael Felix - Software Engineer & Researcher',
-    description: 'Personal website of Rafael Felix, showcasing projects, research, and professional experience.',
+    title: 'Rafael Felix - Research Scientist',
+    description: 'Personal website of Rafael Felix, Ph.D., Research Scientist specializing in multimodal AI for Trust & Safety and Robotics.',
     siteName: 'Rafael Felix',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Rafael Felix - Software Engineer & Researcher',
-    description: 'Personal website of Rafael Felix, showcasing projects, research, and professional experience.',
+    title: 'Rafael Felix - Research Scientist',
+    description: 'Personal website of Rafael Felix, Ph.D., Research Scientist specializing in multimodal AI for Trust & Safety and Robotics.',
     creator: '@rafafelix',
   },
   robots: {

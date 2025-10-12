@@ -1,3 +1,22 @@
+export interface SkillCategory {
+  category: string;
+  items: string[];
+}
+
+export interface Experience {
+  title: string;
+  company: string;
+  duration: string;
+  description: string[];
+}
+
+export interface Education {
+  degree: string;
+  institution: string;
+  duration: string;
+  description: string;
+}
+
 export interface ProfileData {
   name: string;
   title: string;
@@ -12,8 +31,10 @@ export interface ProfileData {
   twitterUrl?: string;
   googleScholarUrl?: string;
   instagramUrl?: string;
-  skills: string[];
+  skills: SkillCategory[];
   interests: string[];
+  experience?: Experience[];
+  education?: Education[];
 }
 
 export interface SocialLink {

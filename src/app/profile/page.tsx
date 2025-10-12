@@ -4,18 +4,19 @@ import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
 import { Section } from '@/components/ui/Section';
 import { Card, CardContent, CardHeader } from '@/components/ui/Card';
+import { Skills } from '@/components/ui/Skills';
 import { profileData } from '@/lib/data';
 
 export const metadata = {
   title: 'Profile - Rafael Felix',
-  description: 'Learn more about Rafael Felix, his background, skills, and professional experience.',
+  description: 'Learn more about Rafael Felix, Ph.D., Research Scientist specializing in multimodal AI for Trust & Safety and Robotics.',
 };
 
 export default function ProfilePage() {
   return (
     <>
       {/* Hero Section */}
-             <Section className="bg-background-primary relative overflow-hidden">
+      <Section className="bg-background-primary relative overflow-hidden">
                {/* Background Image */}
                <div className="absolute inset-0 opacity-10">
                  <Image
@@ -32,7 +33,7 @@ export default function ProfilePage() {
               <div className="space-y-4">
                 <h1 className="text-4xl md:text-5xl font-bold text-text-primary">
                   About{' '}
-                  <span className="text-interactive-primary">
+                  <span className="text-interactive-tertiary">
                     Rafael Felix
                   </span>
                 </h1>
@@ -92,20 +93,9 @@ export default function ProfilePage() {
                 </h2>
               </CardHeader>
               <CardContent>
-                <div className="prose prose-lg max-w-none text-secondary-700 dark:text-secondary-300">
-                  <p className="mb-6">
-                    {profileData.bio}
-                  </p>
-                  <p className="mb-6">
-                    With a strong foundation in computer science and hands-on experience in modern web technologies, 
-                    I'm dedicated to building impactful digital experiences that solve real-world problems. My work 
-                    spans across full-stack development, machine learning, and academic research.
-                  </p>
-                  <p>
-                    I believe in the power of technology to create positive change and am passionate about 
-                    contributing to open-source projects and mentoring the next generation of developers.
-                  </p>
-                </div>
+                <p className="text-text-secondary leading-relaxed whitespace-pre-line">
+                  {profileData.bio}
+                </p>
               </CardContent>
             </Card>
           </div>
@@ -113,108 +103,45 @@ export default function ProfilePage() {
       </Section>
 
       {/* Skills Section */}
-      <Section className="bg-secondary-50 dark:bg-secondary-800">
+      <Section className="py-16 bg-background-primary">
         <Container>
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 dark:text-white mb-4">
-              Skills & Expertise
+            <h2 className="text-3xl font-bold text-text-primary mb-4">
+              My <span className="text-interactive-tertiary">Skills</span>
             </h2>
-            <p className="text-lg text-secondary-600 dark:text-secondary-400 max-w-2xl mx-auto">
-              Technologies and tools I work with across different domains
+            <p className="text-text-secondary max-w-2xl mx-auto">
+              Technologies and expertise across different domains, with interactive skill indicators
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Programming Languages */}
-            <Card>
-              <CardHeader>
-                <h3 className="text-xl font-semibold text-secondary-900 dark:text-white">
-                  Programming Languages
-                </h3>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-3">
-                  {['JavaScript', 'TypeScript', 'Python', 'Node.js'].map((skill) => (
-                    <div key={skill} className="flex items-center justify-between">
-                      <span className="text-secondary-700 dark:text-secondary-300">{skill}</span>
-                      <div className="w-24 bg-secondary-200 dark:bg-secondary-700 rounded-full h-2">
-                        <div className="bg-primary-600 h-2 rounded-full" style={{ width: '90%' }}></div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Frameworks & Libraries */}
-            <Card>
-              <CardHeader>
-                <h3 className="text-xl font-semibold text-secondary-900 dark:text-white">
-                  Frameworks & Libraries
-                </h3>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-3">
-                  {['React', 'Next.js', 'Tailwind CSS', 'TensorFlow'].map((skill) => (
-                    <div key={skill} className="flex items-center justify-between">
-                      <span className="text-secondary-700 dark:text-secondary-300">{skill}</span>
-                      <div className="w-24 bg-secondary-200 dark:bg-secondary-700 rounded-full h-2">
-                        <div className="bg-primary-600 h-2 rounded-full" style={{ width: '85%' }}></div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Tools & Technologies */}
-            <Card>
-              <CardHeader>
-                <h3 className="text-xl font-semibold text-secondary-900 dark:text-white">
-                  Tools & Technologies
-                </h3>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-3">
-                  {['Git', 'Docker', 'AWS', 'Agile'].map((skill) => (
-                    <div key={skill} className="flex items-center justify-between">
-                      <span className="text-secondary-700 dark:text-secondary-300">{skill}</span>
-                      <div className="w-24 bg-secondary-200 dark:bg-secondary-700 rounded-full h-2">
-                        <div className="bg-primary-600 h-2 rounded-full" style={{ width: '80%' }}></div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          </div>
+          <Skills skills={profileData.skills} />
         </Container>
       </Section>
 
-      {/* Interests Section */}
-      <Section>
+
+      {/* Professional Interests Section */}
+      <Section className="py-16 bg-background-primary">
         <Container>
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 dark:text-white mb-4">
-                Professional Interests
+              <h2 className="text-3xl font-bold text-text-primary mb-4">
+                Professional <span className="text-interactive-tertiary">Interests</span>
               </h2>
-              <p className="text-lg text-secondary-600 dark:text-secondary-400">
+              <p className="text-text-secondary">
                 Areas I'm passionate about and actively exploring
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {profileData.interests.map((interest, index) => (
-                <Card key={index} hover>
-                  <CardContent className="p-6">
+                <Card key={index} hover className="p-6">
+                  <CardContent>
                     <div className="flex items-center space-x-3">
-                      <div className="w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-lg flex items-center justify-center">
-                        <span className="text-primary-600 dark:text-primary-400 font-bold text-lg">
+                      <div className="w-12 h-12 bg-surface-secondary rounded-lg flex items-center justify-center">
+                        <span className="text-interactive-primary font-bold text-lg">
                           {interest.charAt(0)}
                         </span>
                       </div>
-                      <h3 className="text-lg font-semibold text-secondary-900 dark:text-white">
+                      <h3 className="text-lg font-semibold text-text-primary">
                         {interest}
                       </h3>
                     </div>

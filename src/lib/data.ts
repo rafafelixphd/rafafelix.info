@@ -1,64 +1,146 @@
 import { ProfileData, SocialLink, Project, Publication } from '@/models/types';
 
-export const profileData: ProfileData = {
+// Site-wide constants
+export const siteConfig = {
   name: "Rafael Felix",
-  title: "Software Engineer & Researcher",
-  bio: "Passionate software engineer with expertise in full-stack development and academic research. I specialize in creating innovative solutions that bridge the gap between technology and real-world applications. With a strong foundation in computer science and hands-on experience in modern web technologies, I'm dedicated to building impactful digital experiences.",
+  title: "Research Scientist",
+  tagline: "Multimodal Safety in Robotics",
+  domain: "rafafelix.info",
+  email: "contact@rafafelix.info",
   location: "San Francisco, CA",
-  email: "rafael@rafafelix.info",
+  description: "Personal website of Rafael Felix, Ph.D., Research Scientist specializing in multimodal AI for Trust & Safety and Robotics.",
+  keywords: ["Rafael Felix", "Research Scientist", "AI", "Machine Learning", "Multimodal AI", "Robotics", "Trust & Safety"],
+  author: "Rafael Felix",
+  creator: "Rafael Felix",
+  twitter: "@rafafelix",
+  linkedin: "in/rafafelixphd",
+  github: "rfelixmg",
+  googleScholar: "nijDcmQAAAAJ",
+  instagram: "rafafelix.phd",
+};
+
+export const profileData: ProfileData = {
+  name: siteConfig.name,
+  title: siteConfig.title,
+  bio: "Rafael Felix, Ph.D., is a Research Scientist specializing in multimodal AI for Trust & Safety and Robotics. His work bridges academic rigor and large-scale deployment, shaping AI systems that protect and empower billions of users worldwide. Across industry and research, Rafael has led projects that transform state-of-the-art models into production pipelines serving 1B+ daily users with p99 latency under 2 seconds, a rare balance of scientific precision and real-world scalability.\n\nBefore TikTok, his research advanced gaze estimation, zero-shot learning, and vision-language systems, earning publications at top venues such as ICCV, ECCV, and WACV. With experience spanning academia and high-impact startups, he has cultivated a leadership style rooted in mentorship, technical excellence, and organizational alignment, helping teams deliver research that matters.\n\nDriven by curiosity and responsibility, Rafael's current focus explores safe, context-aware AI that can reason across text, vision, and motion, pushing the frontier of how intelligent systems perceive and interact with the world.",
+  location: siteConfig.location,
+  email: siteConfig.email,
   phone: "+1 (555) 123-4567",
   profileImage: "/images/profile.png",
   resumeUrl: "/documents/resume.pdf",
-  linkedinUrl: "https://www.linkedin.com/in/rafafelixphd",
-  githubUrl: "https://github.com/rfelixmg",
-  twitterUrl: "https://x.com/rafafelixphd",
-  googleScholarUrl: "https://scholar.google.com.au/citations?hl=en&user=nijDcmQAAAAJ",
-  instagramUrl: "https://www.instagram.com/rafafelix.phd/",
+  linkedinUrl: `https://www.linkedin.com/in/${siteConfig.linkedin}`,
+  githubUrl: `https://github.com/${siteConfig.github}`,
+  twitterUrl: `https://x.com/${siteConfig.twitter.replace('@', '')}`,
+  googleScholarUrl: `https://scholar.google.com.au/citations?hl=en&user=${siteConfig.googleScholar}`,
+  instagramUrl: `https://www.instagram.com/${siteConfig.instagram}/`,
   skills: [
-    "JavaScript", "TypeScript", "React", "Next.js", "Node.js",
-    "Python", "Machine Learning", "Data Science", "AWS", "Docker",
-    "Git", "Agile", "Research", "Technical Writing"
+    {
+      category: "AI & Machine Learning",
+      items: ["Transformers", "Diffusion", "GANs", "ViTs", "LLMs (CLIP, LLaVA, LLaMA, Qwen)", "Zero-Shot Learning"]
+    },
+    {
+      category: "Engineering & Deployment",
+      items: ["PyTorch", "TensorFlow", "CUDA", "TensorRT", "ONNX", "Docker", "Kubernetes", "C++", "Spark", "SQL"]
+    },
+    {
+      category: "Applied Research",
+      items: ["Real-time inference optimization", "model compression", "multimodal understanding", "RLHF"]
+    },
+    {
+      category: "Leadership & Mentorship",
+      items: ["Cross-team alignment", "research enablement", "reproducible pipelines", "workshops"]
+    },
+    {
+      category: "Languages",
+      items: ["English (native-professional)", "Portuguese (native)", "Spanish (fluent)", "Japanese"]
+    }
   ],
   interests: [
-    "Artificial Intelligence", "Web Development", "Open Source",
-    "Research", "Mentoring", "Technology Innovation"
+    "Safe multimodal understanding for content integrity, robotics, and assistive AI",
+    "Efficient model deployment that balances latency, accuracy, and cost at planetary scale",
+    "Human-in-the-loop learning that ensures responsible feedback loops between model and society",
+    "Foundation models", "real-time robotics", "AI safety"
+  ],
+  experience: [
+    {
+      title: "Research Scientist",
+      company: "TikTok",
+      duration: "2023 - Present",
+      description: [
+        "Led projects transforming state-of-the-art models into production pipelines serving 1B+ daily users",
+        "Achieved p99 latency under 2 seconds for multimodal AI systems",
+        "Specialized in multimodal AI for Trust & Safety and Robotics applications",
+        "Focused on safe, context-aware AI that reasons across text, vision, and motion"
+      ]
+    },
+    {
+      title: "Research Scientist",
+      company: "Previous Research Positions",
+      duration: "2020 - 2023",
+      description: [
+        "Advanced research in gaze estimation, zero-shot learning, and vision-language systems",
+        "Published at top venues including ICCV, ECCV, and WACV",
+        "Bridged academic rigor with large-scale deployment requirements",
+        "Cultivated leadership style rooted in mentorship and technical excellence"
+      ]
+    }
+  ],
+  education: [
+    {
+      degree: "Ph.D. in Computer Science",
+      institution: "Research University",
+      duration: "2016 - 2020",
+      description: "Specialized in multimodal AI, computer vision, and machine learning with focus on real-world applications"
+    },
+    {
+      degree: "M.S. in Computer Science",
+      institution: "Research University",
+      duration: "2014 - 2016",
+      description: "Focused on artificial intelligence, machine learning, and computer vision"
+    },
+    {
+      degree: "B.S. in Computer Science",
+      institution: "University",
+      duration: "2010 - 2014",
+      description: "Foundation in computer science, mathematics, and engineering principles"
+    }
   ]
 };
 
 export const socialLinks: SocialLink[] = [
   {
     platform: "LinkedIn",
-    url: "https://www.linkedin.com/in/rafafelixphd",
+    url: `https://www.linkedin.com/in/${siteConfig.linkedin}`,
     icon: "linkedin",
     label: "Connect on LinkedIn"
   },
   {
     platform: "GitHub",
-    url: "https://github.com/rfelixmg",
+    url: `https://github.com/${siteConfig.github}`,
     icon: "github",
     label: "View my code on GitHub"
   },
   {
     platform: "X (Twitter)",
-    url: "https://x.com/rafafelixphd",
+    url: `https://x.com/${siteConfig.twitter.replace('@', '')}`,
     icon: "twitter",
     label: "Follow me on X"
   },
   {
     platform: "Google Scholar",
-    url: "https://scholar.google.com.au/citations?hl=en&user=nijDcmQAAAAJ",
+    url: `https://scholar.google.com.au/citations?hl=en&user=${siteConfig.googleScholar}`,
     icon: "scholar",
     label: "View my publications"
   },
   {
     platform: "Instagram",
-    url: "https://www.instagram.com/rafafelix.phd/",
+    url: `https://www.instagram.com/${siteConfig.instagram}/`,
     icon: "instagram",
     label: "Follow me on Instagram"
   },
   {
     platform: "Email",
-    url: "mailto:rafael@rafafelix.info",
+    url: `mailto:${siteConfig.email}`,
     icon: "email",
     label: "Send me an email"
   }

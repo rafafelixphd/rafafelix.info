@@ -22,7 +22,7 @@ export const Footer: React.FC = () => {
                 </span>
               </Link>
               <p className="text-sm text-text-secondary">
-                Software Engineer & Researcher passionate about building innovative solutions.
+                Research Scientist specializing in multimodal AI for Trust & Safety and Robotics.
               </p>
             </div>
 

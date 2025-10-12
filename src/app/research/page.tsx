@@ -166,7 +166,7 @@ export default function ResearchPage() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold text-secondary-900 dark:text-white mb-2">
-                  Software Engineering
+                  AI Research
                 </h3>
                 <p className="text-secondary-600 dark:text-secondary-400">
                   System architecture, development methodologies, and tools for building robust software solutions.

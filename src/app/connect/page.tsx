@@ -15,39 +15,28 @@ export default function ConnectPage() {
   return (
     <>
       {/* Hero Section */}
-             <Section className="bg-background-primary relative overflow-hidden">
-               {/* Background Image */}
-               <div className="absolute inset-0 opacity-10">
-                 <Image
-                   src="/images/assets_task_01k7b1r2v6ezmbw7gjn1mq1gpe_1760233852_img_1.webp"
-                   alt="Background pattern"
-                   fill
-                   className="object-cover"
-                   priority
-                 />
-               </div>
+      <Section className="bg-background-primary relative overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 opacity-10">
+          <Image
+            src="/images/assets_task_01k7b1r2v6ezmbw7gjn1mq1gpe_1760233852_img_1.webp"
+            alt="Background pattern"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
         <Container className="relative z-10">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold text-text-primary mb-6">
               Let's{' '}
-              <span className="text-interactive-primary">
+              <span className="text-interactive-tertiary">
                 Connect
               </span>
             </h1>
             <p className="text-xl text-text-secondary mb-8">
               I&apos;m always interested in discussing new opportunities, collaborations, or just having a chat about technology and innovation.
             </p>
-            
-            <div className="flex items-center justify-center space-x-6 text-sm text-text-secondary">
-              <div className="flex items-center space-x-2">
-                <span className="font-medium">📍</span>
-                <span>{profileData.location}</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <span className="font-medium">💼</span>
-                <span>Available for opportunities</span>
-              </div>
-            </div>
           </div>
         </Container>
       </Section>

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
 import { Section } from '@/components/ui/Section';
-import { profileData } from '@/lib/data';
+import { profileData, siteConfig } from '@/lib/data';
 
 export default function HomePage() {
   return (
@@ -42,13 +42,13 @@ export default function HomePage() {
                 {/* Name and Title */}
                 <div className="space-y-2">
                   <h1 className="text-2xl font-bold text-text-primary">
-                    RAFA FELIX
+                    {siteConfig.name.toUpperCase().replace('RAFAEL', 'RAFA')}
                   </h1>
                   <p className="text-sm text-text-secondary font-medium">
-                    RESEARCH SCIENTIST
+                    {siteConfig.title.toUpperCase()}
                   </p>
                   <p className="text-xs text-text-secondary italic">
-                    Multimodal Safety in Robotics
+                    {siteConfig.tagline}
                   </p>
                 </div>
 
