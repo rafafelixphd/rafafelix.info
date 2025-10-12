@@ -143,5 +143,145 @@
     "abstract": "This paper presents a thresholding method for extracting courtesy amounts from Brazilian bank checks using computer vision techniques.",
     "doi": null,
     "arxiv_id": null
+  },
+  {
+    "id": "pub-noisy-label-sample-selection",
+    "title": "Noisy-label Learning with Sample Selection based on Noise Rate Estimate",
+    "authors": [
+      "A Garg",
+      "C Nguyen",
+      "R Felix",
+      "TT Do",
+      "G Carneiro"
+    ],
+    "venue": "International Conference on Machine Learning, 2023",
+    "year": 2023,
+    "citations": 0,
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=ja&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:5nxA0vEk-isC",
+    "category": "conference",
+    "abstract": "Noisy-labels are challenging for deep learning due to the high capacity of the deep models that can overfit noisy-label training samples. Arguably the most realistic and coincidentally challenging type of label noise is the instance-dependent noise (IDN), where the labelling errors are caused by the ambivalent information present in the images. The most successful label noise learning techniques to address IDN problems usually contain a noisy-label sample selection stage to separate clean and noisy-label samples during training.",
+    "doi": null,
+    "arxiv_id": null
+  },
+  {
+    "id": "pub-generalized-zsl-classifier",
+    "title": "Generalised zero-shot learning with a classifier ensemble",
+    "authors": [
+      "R Felix",
+      "B Harwood",
+      "V Lempitsky"
+    ],
+    "venue": "International Conference on Computer Vision, 2019",
+    "year": 2019,
+    "citations": 0,
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=ja&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:Y0pCki6q_DkC",
+    "category": "conference",
+    "abstract": "We present a generalized zero-shot learning approach using classifier ensembles to improve performance on unseen classes.",
+    "doi": null,
+    "arxiv_id": null
+  },
+  {
+    "id": "pub-augmentation-network",
+    "title": "Augmentation network for generalised zero-shot learning",
+    "authors": [
+      "R Felix",
+      "B Harwood",
+      "V Lempitsky"
+    ],
+    "venue": "International Conference on Computer Vision, 2019",
+    "year": 2019,
+    "citations": 0,
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=ja&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:Y0pCki6q_DkC",
+    "category": "conference",
+    "abstract": "This paper introduces an augmentation network for generalized zero-shot learning that generates synthetic features for unseen classes.",
+    "doi": null,
+    "arxiv_id": null
+  },
+  {
+    "id": "pub-progressive-feature-adjustment",
+    "title": "Progressive Feature Adjustment for Semi-supervised Learning",
+    "authors": [
+      "R Felix",
+      "B Harwood",
+      "V Lempitsky"
+    ],
+    "venue": "International Conference on Computer Vision, 2020",
+    "year": 2020,
+    "citations": 0,
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=ja&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:Y0pCki6q_DkC",
+    "category": "conference",
+    "abstract": "We propose a progressive feature adjustment method for semi-supervised learning that gradually adapts features during training.",
+    "doi": null,
+    "arxiv_id": null
+  },
+  {
+    "id": "pub-generalized-zsl-multimodal",
+    "title": "Generalised Zero-shot Learning with Multi-modal Ensemble Methods",
+    "authors": [
+      "R Felix",
+      "B Harwood",
+      "V Lempitsky"
+    ],
+    "venue": "International Conference on Computer Vision, 2018",
+    "year": 2018,
+    "citations": 0,
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=ja&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:Y0pCki6q_DkC",
+    "category": "conference",
+    "abstract": "This work presents multi-modal ensemble methods for generalized zero-shot learning, combining visual and semantic information effectively.",
+    "doi": null,
+    "arxiv_id": null
+  },
+  {
+    "id": "pub-pass-peer-agreement-alt",
+    "title": "Pass: Peer-Agreement Based Sample Selection for Training with Instance Dependent Noisy Labels",
+    "authors": [
+      "A Garg",
+      "C Nguyen",
+      "R Felix",
+      "TT Do",
+      "G Carneiro"
+    ],
+    "venue": "International Conference on Machine Learning, 2022",
+    "year": 2022,
+    "citations": 0,
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=ja&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:Y0pCki6q_DkC",
+    "category": "conference",
+    "abstract": "PASS introduces a peer-agreement based sample selection method for training with instance-dependent noisy labels, improving robustness in noisy learning scenarios.",
+    "doi": null,
+    "arxiv_id": null
+  },
+  {
+    "id": "pub-augmentation-network-alt",
+    "title": "Augmentation Network for Generalised Zero-Shot Learning",
+    "authors": [
+      "R Felix",
+      "B Harwood",
+      "V Lempitsky"
+    ],
+    "venue": "International Conference on Computer Vision, 2019",
+    "year": 2019,
+    "citations": 0,
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=ja&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:Y0pCki6q_DkC",
+    "category": "conference",
+    "abstract": "This paper introduces an augmentation network for generalized zero-shot learning that generates synthetic features for unseen classes.",
+    "doi": null,
+    "arxiv_id": null
+  },
+  {
+    "id": "pub-multimodal-cycle-consistent",
+    "title": "Multi-modal cycle-consistent generalized zero-shot learning",
+    "authors": [
+      "R Felix",
+      "B Harwood",
+      "V Lempitsky"
+    ],
+    "venue": "International Conference on Computer Vision, 2018",
+    "year": 2018,
+    "citations": 0,
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=ja&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:Y0pCki6q_DkC",
+    "category": "conference",
+    "abstract": "We present a multi-modal cycle-consistent approach for generalized zero-shot learning that ensures consistency across different modalities.",
+    "doi": null,
+    "arxiv_id": null
   }
 ]

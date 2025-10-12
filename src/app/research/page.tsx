@@ -12,15 +12,11 @@ import { researchContent } from '@/lib/research';
 
 export default function ResearchPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedYear, setSelectedYear] = useState<string>('all');
-
-  const categories = ['all', 'journal', 'conference', 'preprint'];
-  const years = ['all', ...Array.from(new Set(publications.map(p => p.year.toString()))).sort((a, b) => b.localeCompare(a))];
+  const categories = ['all', 'journal', 'conference', 'workshop', 'preprint', 'book'];
 
   const filteredPublications = publications.filter((publication) => {
     const categoryMatch = selectedCategory === 'all' || publication.category === selectedCategory;
-    const yearMatch = selectedYear === 'all' || publication.year.toString() === selectedYear;
-    return categoryMatch && yearMatch;
+    return categoryMatch;
   });
 
   const getCategoryColor = (category: string) => {
