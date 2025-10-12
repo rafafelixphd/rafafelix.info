@@ -13,9 +13,9 @@ interface ProjectHeroProps {
 
 export function ProjectHero({ project }: ProjectHeroProps) {
   return (
-    <Section className="min-h-screen flex items-center justify-center">
+    <Section className="min-h-screen">
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start pt-16">
           {/* Left Side - Content */}
           <div className="space-y-8">
 
@@ -24,10 +24,60 @@ export function ProjectHero({ project }: ProjectHeroProps) {
               {project.title}
             </h1>
 
-            {/* Key Metric */}
+            {/* Key Metrics */}
             {project.outcomes && project.outcomes.length > 0 && (
-              <div className="text-xl md:text-2xl font-semibold text-primary-600 dark:text-primary-400">
-                {project.outcomes[0]}
+              <div className="space-y-6">
+
+                {project.outcomes.length > 1 && (
+                  <div className="space-y-3">
+                    {project.outcomes.slice(1, 5).map((outcome, index) => {
+                      const getMetricIcon = (outcome: string) => {
+                        if (outcome.includes('accuracy') || outcome.includes('benchmark')) {
+                          return (
+                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                            </svg>
+                          );
+                        } else if (outcome.includes('latency') || outcome.includes('QPS')) {
+                          return (
+                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                          );
+                        } else if (outcome.includes('videos') || outcome.includes('scale')) {
+                          return (
+                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m-9 0h10m-10 0a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V6a2 2 0 00-2-2M9 12h6m-6 4h6" />
+                            </svg>
+                          );
+                        }
+                        return (
+                          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                        );
+                      };
+
+                      return (
+                        <div 
+                          key={index} 
+                          className="bg-white dark:bg-gray-800 rounded-lg p-2 shadow-sm border border-gray-200 dark:border-gray-700 group transition-all duration-300 hover:scale-[1.02] hover:shadow-md"
+                        >
+                          <div className="flex items-start space-x-3">
+                            <div className="w-8 h-8 bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-900 dark:to-primary-800 rounded-lg flex items-center justify-center text-primary-600 dark:text-primary-400 group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                              {getMetricIcon(outcome)}
+                            </div>
+                            <div className="flex-1">
+                              <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
+                                {outcome}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
               </div>
             )}
 
@@ -35,6 +85,128 @@ export function ProjectHero({ project }: ProjectHeroProps) {
             <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
               {project.longDescription || project.description}
             </p>
+
+            {/* Challenge Section */}
+            {project.challenge && (
+              <div className="space-y-4">
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">The Challenge</h3>
+                <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                  {project.challenge}
+                </p>
+              </div>
+            )}
+
+            {/* Solution Section */}
+            {project.solution && (
+              <div className="space-y-4">
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">The Solution</h3>
+                <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                  {project.solution}
+                </p>
+              </div>
+            )}
+
+            {/* Results Section */}
+            {project.results && (
+              <div className="space-y-4">
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">The Results</h3>
+                <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                  {project.results}
+                </p>
+              </div>
+            )}
+
+            {/* Technical Achievements */}
+            {project.technicalHighlights && project.technicalHighlights.length > 0 && (
+              <div className="space-y-6">
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">Technical Achievements</h3>
+                <div className="grid gap-4">
+                  {project.technicalHighlights.map((highlight, index) => {
+                    const getAchievementIcon = (highlight: string) => {
+                      if (highlight.toLowerCase().includes('performance') || highlight.toLowerCase().includes('optimization')) {
+                        return (
+                          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                          </svg>
+                        );
+                      } else if (highlight.toLowerCase().includes('scalability') || highlight.toLowerCase().includes('architecture')) {
+                        return (
+                          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                          </svg>
+                        );
+                      } else if (highlight.toLowerCase().includes('security') || highlight.toLowerCase().includes('privacy')) {
+                        return (
+                          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                          </svg>
+                        );
+                      } else if (highlight.toLowerCase().includes('integration') || highlight.toLowerCase().includes('api')) {
+                        return (
+                          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                          </svg>
+                        );
+                      } else if (highlight.toLowerCase().includes('machine learning') || highlight.toLowerCase().includes('ai') || highlight.toLowerCase().includes('model')) {
+                        return (
+                          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                          </svg>
+                        );
+                      } else if (highlight.toLowerCase().includes('database') || highlight.toLowerCase().includes('data')) {
+                        return (
+                          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
+                          </svg>
+                        );
+                      }
+                      return (
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                      );
+                    };
+
+                    const getAchievementBadge = (index: number) => {
+                      const badges = ['🏆', '⭐', '🚀', '💎', '🎯', '🔥', '⚡', '🎖️'];
+                      return badges[index % badges.length];
+                    };
+
+                    return (
+                      <div 
+                        key={index} 
+                        className="group bg-gradient-to-r from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-xl p-4 border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-[1.02] hover:border-primary-300 dark:hover:border-primary-600"
+                      >
+                        <div className="flex items-start space-x-4">
+                          {/* Achievement Badge */}
+                          <div className="flex-shrink-0">
+                            <div className="w-12 h-12 bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-900 dark:to-primary-800 rounded-lg flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300">
+                              {getAchievementBadge(index)}
+                            </div>
+                          </div>
+                          
+                          {/* Content */}
+                          <div className="flex-1 min-w-0">
+                            <p className="text-gray-700 dark:text-gray-300 leading-relaxed group-hover:text-gray-900 dark:group-hover:text-white transition-colors duration-300">
+                              {highlight}
+                            </p>
+                          </div>
+                          
+                          {/* Progress Indicator */}
+                          <div className="flex-shrink-0">
+                            <div className="w-8 h-8 rounded-full bg-green-100 dark:bg-green-900 flex items-center justify-center">
+                              <svg className="w-4 h-4 text-green-600 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
 
             {/* Technologies */}
             <div className="flex flex-wrap gap-3">
@@ -83,7 +255,7 @@ export function ProjectHero({ project }: ProjectHeroProps) {
           </div>
 
           {/* Right Side - Illustration and Quick Summary */}
-          <div className="space-y-8">
+          <div className="space-y-8 sticky top-20">
             {/* Illustration */}
             <div className="relative">
               <Image
@@ -96,47 +268,27 @@ export function ProjectHero({ project }: ProjectHeroProps) {
               />
             </div>
 
-            {/* Quick Summary Sidebar */}
+            {/* BLUF Project Overview */}
             <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Key Results</h3>
-              <div className="space-y-3">
-                {project.outcomes?.slice(0, 4).map((outcome, index) => (
-                  <div key={index} className="flex items-start space-x-3">
-                    <div className="w-6 h-6 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <span className="text-primary-600 dark:text-primary-400 text-sm font-bold">
-                        {index + 1}
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Project overview: {project.title}</h3>
+              
+              {/* Key Results */}
+              {project.outcomes && project.outcomes.length > 0 && (
+                <div className="space-y-3">
+                  {project.outcomes.slice(0, 3).map((outcome, index) => (
+                    <div key={index} className="flex items-start space-x-3">
+                      <div className="w-5 h-5 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <span className="text-primary-600 dark:text-primary-400 text-xs font-bold">
+                          {index + 1}
+                        </span>
+                      </div>
+                      <span className="text-sm text-gray-700 dark:text-gray-300 font-medium">
+                        {outcome}
                       </span>
                     </div>
-                    <span className="text-sm text-gray-700 dark:text-gray-300">
-                      {outcome}
-                    </span>
-                  </div>
-                ))}
-              </div>
-              
-              {/* Project Meta */}
-              <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
-                <div className="space-y-2 text-sm text-gray-500 dark:text-gray-400">
-                  {project.startDate && (
-                    <div className="flex items-center space-x-2">
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                      </svg>
-                      <span>{new Date(project.startDate).getFullYear()}</span>
-                      {project.endDate && (
-                        <span> - {new Date(project.endDate).getFullYear()}</span>
-                      )}
-                    </div>
-                  )}
-                  
-                  <div className="flex items-center space-x-2">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <span>{project.outcomes?.length || 0} key outcomes</span>
-                  </div>
+                  ))}
                 </div>
-              </div>
+              )}
             </div>
           </div>
         </div>
