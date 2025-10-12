@@ -100,7 +100,7 @@ def scrape_scholar_basic(scholar_id):
     
     return papers
 
-def save_publications_to_json(papers, filename="../public/data/publications.json"):
+def save_publications_to_json(papers, filename="./publications.basic.json"):
     """Save publications to JSON file"""
     with open(filename, 'w', encoding='utf-8') as f:
         json.dump(papers, f, indent=2, ensure_ascii=False)
