@@ -95,7 +95,7 @@ export default function ResearchPage() {
               Research Areas
             </h2>
             <p className="text-lg text-secondary-600 dark:text-secondary-400 max-w-2xl mx-auto">
-              My research focuses on the intersection of machine learning, software engineering, and practical applications.
+            My research works at the intersection of machine learning, robotics, and safety, developing multimodal systems that can perceive, reason, and act responsibly in the physical world.
             </p>
           </div>
 

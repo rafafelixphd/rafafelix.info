@@ -26,7 +26,6 @@
     "Built a global gaze dataset across 5+ regions using Amazon Mechanical Turk",
     "Collected and validated thousands of RGB samples under privacy-safe protocols",
     "Reduced expected error margin from 50 mm to <30 mm in desktop inference",
-    "Enabled $300K initial contract with expansion into new international markets",
     "Delivered full project lifecycle within a three-month timeline"
   ],
   "challenge": "Creating a reliable, large-scale dataset for gaze estimation under a three-month timeline required orchestrating crowd-based data collection while maintaining participant privacy, regional compliance, and quality control. Achieving uniform accuracy across devices and demographics added further complexity.",

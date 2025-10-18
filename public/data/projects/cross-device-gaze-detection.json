@@ -22,18 +22,17 @@
   "endDate": "2024-01-30",
   "outcomes": [
     "Reduced gaze error from ~50 mm → < 30 mm across devices",
-    "Processed 34 M+ live attention samples in production",
+    "Processed 11B+ live attention samples in production",
     "Supported 63 formats, 19 platforms, 16 countries in deployment",
-    "Enabled $6 M annual revenue through precise engagement analytics",
-    "Set new technical baseline for cross-domain gaze modeling"
+    "1.3M+ human subjects participated in the dataset collection"
   ],
   "challenge": "Device-specific differences in camera position, user distance, and lighting cause large performance gaps in gaze-tracking models. Building a unified model that generalizes across phones, TVs, and desktops without compromising accuracy or privacy was critical for real-world adoption.",
-  "solution": "Developed a multimodal gaze-estimation architecture blending CNN and ViT encoders with domain adaptation layers. Introduced novel loss functions to stabilize regression and trained on a cross-device dataset of 5,000 participants. Deployed a 4K real-time pipeline sustaining 8 K QPS at 360 MB/s throughput using TFLite and ONNX quantization. Combined edge inference and anonymized telemetry to maintain privacy and global performance consistency.",
-  "results": "Delivered reliable cross-device gaze estimation with < 30 mm error margin, producing 84 % F1 score in attention prediction. Processed 34 million live views and generated $6 million in annual revenue for attention analytics products while upholding strict privacy and compliance standards.",
+  "solution": "Developed a multimodal gaze-estimation architecture blending CNN and ViT encoders with domain adaptation layers. Introduced novel loss functions to stabilize regression and trained on a cross-device dataset of 1.3M+ participants. Deployed a 4K real-time pipeline sustaining 8K QPS at 360 MB/s throughput using TFLite and ONNX quantization. Combined edge inference and anonymized telemetry to maintain privacy and global performance consistency.",
+  "results": "Delivered reliable cross-device gaze estimation wit h < 30 mm error margin, producing 85 % F1 score in attention prediction. Processed 34 million live views and generated millions in ARR for attention analytics products while upholding strict privacy and compliance standards.",
   "technicalHighlights": [
     "Unified gaze-estimation pipeline for mobile, desktop, and TV contexts",
     "Custom loss functions correcting regression-to-mean in hybrid CNN + ViT models",
-    "4K real-time inference at 8 K QPS and 360 MB/s throughput",
+    "4K real-time inference at 8K QPS and 360 MB/s throughput",
     "Cross-device calibration using geometric normalization and domain adaptation",
     "Integrated privacy-safe telemetry ensuring compliant attention analytics"
   ]
