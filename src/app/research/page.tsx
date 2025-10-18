@@ -11,11 +11,27 @@ import { researchContent } from '@/lib/research';
 
 export default function ResearchPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [sortBy, setSortBy] = useState<string>('citations-desc');
   const categories = ['all', 'journal', 'conference', 'workshop', 'preprint', 'book'];
+  const sortOptions = [
+    { value: 'year-desc', label: 'Per Year' },
+    { value: 'citations-desc', label: 'Per Citation' }
+  ];
 
   const filteredPublications = publications.filter((publication) => {
     const categoryMatch = selectedCategory === 'all' || publication.category === selectedCategory;
     return categoryMatch;
+  });
+
+  const sortedPublications = [...filteredPublications].sort((a, b) => {
+    switch (sortBy) {
+      case 'year-desc':
+        return b.year - a.year;
+      case 'citations-desc':
+        return (b.citations || 0) - (a.citations || 0);
+      default:
+        return 0;
+    }
   });
 
   const getCategoryColor = (category: string) => {
@@ -129,13 +145,17 @@ export default function ResearchPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 dark:text-white mb-4">
               {researchContent.publications.title}
             </h2>
-            <p className="text-lg text-secondary-600 dark:text-secondary-400 max-w-2xl mx-auto">
+            <p className="text-lg text-secondary-600 dark:text-secondary-400 max-w-2xl mx-auto mb-4">
               {researchContent.publications.description}
+            </p>
+            <p className="text-sm text-secondary-500 dark:text-secondary-500">
+              Showing {sortedPublications.length} of {publications.length} publications
             </p>
           </div>
 
-          {/* Filters */}
-          <div className="flex flex-col md:flex-row gap-4 justify-center items-center mb-12">
+          {/* Filters and Sort */}
+          <div className="flex flex-col lg:flex-row gap-6 justify-between items-center mb-12">
+            {/* Category Filters */}
             <div className="flex flex-wrap gap-2">
               <span className="text-sm font-medium text-secondary-700 dark:text-secondary-300 mr-2">Type:</span>
               {categories.map((category) => (
@@ -153,11 +173,30 @@ export default function ResearchPage() {
               ))}
             </div>
 
+            {/* Sort Buttons */}
+            <div className="flex items-center gap-2">
+              <span className="text-sm font-medium text-secondary-700 dark:text-secondary-300">Sort by:</span>
+              <div className="flex gap-2">
+                {sortOptions.map((option) => (
+                  <button
+                    key={option.value}
+                    onClick={() => setSortBy(option.value)}
+                    className={`px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200 ${
+                      sortBy === option.value
+                        ? 'bg-interactive-tertiary text-white'
+                        : 'bg-secondary-100 dark:bg-secondary-800 text-secondary-700 dark:text-secondary-300 hover:bg-interactive-tertiary hover:text-white'
+                    }`}
+                  >
+                    {option.label}
+                  </button>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* Publications List */}
           <div className="space-y-6">
-            {filteredPublications.map((publication) => (
+            {sortedPublications.map((publication) => (
               <Card key={publication.id} hover>
                 <CardContent className="p-6">
                   <div className="space-y-4">
@@ -213,7 +252,7 @@ export default function ResearchPage() {
             ))}
           </div>
 
-          {filteredPublications.length === 0 && (
+          {sortedPublications.length === 0 && (
             <div className="text-center py-12">
               <p className="text-secondary-600 dark:text-secondary-400">
                 No publications found matching the selected filters.

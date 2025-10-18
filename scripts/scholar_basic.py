@@ -46,18 +46,28 @@ def scrape_scholar_basic(scholar_id):
             if year is None:
                 year_match_title = re.search(r'\b(19|20)\d{2}\b', title)
                 year = int(year_match_title.group()) if year_match_title else 2024
+                year = max(year, 2014)
             
             # Get citations
             citations_elem = paper.find('a', class_='gsc_a_c')
-            citations = 0
+            if not citations_elem:
+                # Try alternative selector
+                citations_elem = paper.find('td', class_='gsc_a_c')
+            
             if citations_elem:
                 citations_text = citations_elem.text.strip()
                 # Handle cases like "1*" or "2**" (remove asterisks)
                 citations_text = re.sub(r'\*+', '', citations_text)
-                if citations_text.isdigit():
-                    citations = int(citations_text)
-                elif citations_text == '':
+                # Handle empty citations
+                if citations_text == '' or citations_text == '-':
                     citations = 0
+                else:
+                    try:
+                        citations = int(citations_text)
+                    except ValueError:
+                        # If it's not a number, try to extract number from text
+                        number_match = re.search(r'\d+', citations_text)
+                        citations = int(number_match.group()) if number_match else 0
             
             # Get paper URL
             paper_url = None
@@ -93,6 +103,10 @@ def scrape_scholar_basic(scholar_id):
             papers.append(paper_data)
             
             print(f"Parsed: {title[:50]}... - {citations} citations - {year}")
+            if citations_elem:
+                print(f"  Citation element found: '{citations_elem.text.strip()}'")
+            else:
+                print(f"  No citation element found for: {title[:30]}...")
             
         except Exception as e:
             print(f"Error parsing paper: {e}")

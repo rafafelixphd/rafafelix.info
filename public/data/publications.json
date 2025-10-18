@@ -1,287 +1,298 @@
 [
-  {
-    "id": "pub-ba76a4e2",
-    "title": "AEON: Adaptive Estimation of Instance-Dependent In-Distribution and Out-of-Distribution Label Noise for Robust Learning",
-    "authors": [
-      "A Garg",
-      "C Nguyen",
-      "R Felix",
-      "Y Liu",
-      "TT Do",
-      "G Carneiro"
-    ],
-    "venue": "arXiv preprint arXiv:2501.13389, 2025",
-    "year": 2025,
-    "citations": 1,
-    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=ja&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:kNdYIx-mwKoC",
-    "category": "preprint",
-    "abstract": "Robust training with noisy labels is a critical challenge in image classification, offering the potential to reduce reliance on costly clean-label datasets. Real-world datasets often contain a mix of in-distribution (ID) and out-of-distribution (OOD) instance-dependent label noise, a challenge that is rarely addressed simultaneously by existing methods and is further compounded by the lack of comprehensive benchmarking datasets. Furthermore, even though current noisy-label learning approaches attempt to find noisy-label samples during training, these methods do not aim to estimate ID and OOD noise rates to promote their effectiveness in the selection of such noisy-label samples, and they are often represented by inefficient multi-stage learning algorithms. We propose the Adaptive Estimation of Instance-Dependent In-Distribution and Out-of-Distribution Label Noise (AEON) approach to address these research gaps. AEON is an efficient one-stage noisy-label learning methodology that dynamically estimates instance-dependent ID and OOD label noise rates to enhance robustness to complex noise settings. Additionally, we introduce a new benchmark reflecting real-world ID and OOD noise scenarios. Experiments demonstrate that AEON achieves state-of-the-art performance on both synthetic and real-world datasets",
-    "doi": null,
-    "arxiv_id": "2501.13389"
-  },
-  {
-    "id": "pub-0c3fd356",
-    "title": "Instance-Dependent Noisy-Label Learning with Graphical Model Based Noise-Rate Estimation",
-    "authors": [
-      "A Garg",
-      "C Nguyen",
-      "R Felix",
-      "TT Do",
-      "G Carneiro"
-    ],
-    "venue": "European Conference on Computer Vision, 372-389, 2024",
-    "year": 2024,
-    "citations": 0,
-    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=ja&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:MXK_kJrjxJIC",
-    "category": "conference",
-    "abstract": "Deep learning faces a formidable challenge when handling noisy labels, as models tend to overfit samples affected by label noise. This challenge is further compounded by the presence of instance-dependent noise (IDN), a realistic form of label noise arising from ambiguous sample information. To address IDN, Label Noise Learning (LNL) incorporates a sample selection stage to differentiate clean and noisy-label samples. This stage uses an arbitrary criterion and a pre-defined curriculum that initially selects most samples as noisy and gradually decreases this selection rate during training. Such curriculum is sub-optimal since it does not consider the actual label noise rate in the training set. This paper addresses this issue with a new noise-rate estimation method that is easily integrated with most state-of-the-art (SOTA) LNL methods to produce a more effective curriculum. Synthetic and real-world benchmarks demonstrate the effectiveness of our approach.",
-    "doi": null,
-    "arxiv_id": null
-  },
-  {
-    "id": "pub-52ca0ce7",
-    "title": "Instance-dependent noisy label learning via graphical modelling",
-    "authors": [
-      "A Garg",
-      "C Nguyen",
-      "R Felix",
-      "TT Do",
-      "G Carneiro"
-    ],
-    "venue": "International Conference on Computer Vision, 2023",
-    "year": 2023,
-    "citations": 52,
-    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=ja&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:u5HHmVD_uO8C",
-    "category": "conference",
-    "abstract": "This paper presents a novel approach to handling instance-dependent noisy labels in deep learning through graphical modeling techniques. We introduce a probabilistic framework that captures the relationship between clean and noisy labels, enabling more robust training in the presence of label noise.",
-    "doi": null,
-    "arxiv_id": null
-  },
-  {
-    "id": "pub-multimodal-ensemble",
-    "title": "Multi-modal ensemble classification for generalized zero-shot learning",
-    "authors": [
-      "R Felix",
-      "B Harwood",
-      "V Lempitsky"
-    ],
-    "venue": "Computer Vision and Pattern Recognition, 2018",
-    "year": 2018,
-    "citations": 3,
-    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=ja&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:9yKSN-GCB0IC",
-    "category": "conference",
-    "abstract": "We propose a multi-modal ensemble approach for generalized zero-shot learning that leverages both visual and semantic information to improve classification performance on unseen classes.",
-    "doi": null,
-    "arxiv_id": null
-  },
-  {
-    "id": "pub-cross-modal-vqa",
-    "title": "Cross-modal visual question answering for remote sensing",
-    "authors": [
-      "R Felix",
-      "S Kumar",
-      "V Lempitsky"
-    ],
-    "venue": "International Conference on Computer Vision, 2019",
-    "year": 2019,
-    "citations": 0,
-    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=ja&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:2osOgNQ5qMEC",
-    "category": "conference",
-    "abstract": "This work introduces cross-modal visual question answering for remote sensing imagery, enabling natural language queries about satellite and aerial images.",
-    "doi": null,
-    "arxiv_id": null
-  },
-  {
-    "id": "pub-generalized-zsl",
-    "title": "Generalised zero-shot learning with domain classification in a semantic space",
-    "authors": [
-      "R Felix",
-      "B Harwood",
-      "V Lempitsky"
-    ],
-    "venue": "European Conference on Computer Vision, 2018",
-    "year": 2018,
-    "citations": 15,
-    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=ja&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:u-x6o8ySG0sC",
-    "category": "conference",
-    "abstract": "We present a generalized zero-shot learning framework that performs domain classification in a semantic space, improving performance on both seen and unseen classes.",
-    "doi": null,
-    "arxiv_id": null
-  },
-  {
-    "id": "pub-pass-peer-agreement",
-    "title": "PASS: Peer-agreement based sample selection for training with instance dependent noisy labels",
-    "authors": [
-      "A Garg",
-      "C Nguyen",
-      "R Felix",
-      "TT Do",
-      "G Carneiro"
-    ],
-    "venue": "International Conference on Machine Learning, 2022",
-    "year": 2022,
-    "citations": 2,
-    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=ja&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:Y0pCki6q_DkC",
-    "category": "conference",
-    "abstract": "PASS introduces a peer-agreement based sample selection method for training with instance-dependent noisy labels, improving robustness in noisy learning scenarios.",
-    "doi": null,
-    "arxiv_id": null
-  },
-  {
-    "id": "pub-thresholding-brazilian",
-    "title": "Thresholding the courtesy amount of brazilian bank checks",
-    "authors": [
-      "R Felix",
-      "M Oliveira",
-      "A Silva"
-    ],
-    "venue": "Brazilian Symposium on Computer Graphics and Image Processing, 2017",
-    "year": 2017,
-    "citations": 0,
-    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=ja&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:Y0pCki6q_DkC",
-    "category": "conference",
-    "abstract": "This paper presents a thresholding method for extracting courtesy amounts from Brazilian bank checks using computer vision techniques.",
-    "doi": null,
-    "arxiv_id": null
-  },
-  {
-    "id": "pub-noisy-label-sample-selection",
-    "title": "Noisy-label Learning with Sample Selection based on Noise Rate Estimate",
-    "authors": [
-      "A Garg",
-      "C Nguyen",
-      "R Felix",
-      "TT Do",
-      "G Carneiro"
-    ],
-    "venue": "International Conference on Machine Learning, 2023",
-    "year": 2023,
-    "citations": 0,
-    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=ja&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:5nxA0vEk-isC",
-    "category": "conference",
-    "abstract": "Noisy-labels are challenging for deep learning due to the high capacity of the deep models that can overfit noisy-label training samples. Arguably the most realistic and coincidentally challenging type of label noise is the instance-dependent noise (IDN), where the labelling errors are caused by the ambivalent information present in the images. The most successful label noise learning techniques to address IDN problems usually contain a noisy-label sample selection stage to separate clean and noisy-label samples during training.",
-    "doi": null,
-    "arxiv_id": null
-  },
-  {
-    "id": "pub-generalized-zsl-classifier",
-    "title": "Generalised zero-shot learning with a classifier ensemble",
-    "authors": [
-      "R Felix",
-      "B Harwood",
-      "V Lempitsky"
-    ],
-    "venue": "International Conference on Computer Vision, 2019",
-    "year": 2019,
-    "citations": 0,
-    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=ja&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:Y0pCki6q_DkC",
-    "category": "conference",
-    "abstract": "We present a generalized zero-shot learning approach using classifier ensembles to improve performance on unseen classes.",
-    "doi": null,
-    "arxiv_id": null
-  },
-  {
-    "id": "pub-augmentation-network",
-    "title": "Augmentation network for generalised zero-shot learning",
-    "authors": [
-      "R Felix",
-      "B Harwood",
-      "V Lempitsky"
-    ],
-    "venue": "International Conference on Computer Vision, 2019",
-    "year": 2019,
-    "citations": 0,
-    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=ja&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:Y0pCki6q_DkC",
-    "category": "conference",
-    "abstract": "This paper introduces an augmentation network for generalized zero-shot learning that generates synthetic features for unseen classes.",
-    "doi": null,
-    "arxiv_id": null
-  },
-  {
-    "id": "pub-progressive-feature-adjustment",
-    "title": "Progressive Feature Adjustment for Semi-supervised Learning",
-    "authors": [
-      "R Felix",
-      "B Harwood",
-      "V Lempitsky"
-    ],
-    "venue": "International Conference on Computer Vision, 2020",
-    "year": 2020,
-    "citations": 0,
-    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=ja&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:Y0pCki6q_DkC",
-    "category": "conference",
-    "abstract": "We propose a progressive feature adjustment method for semi-supervised learning that gradually adapts features during training.",
-    "doi": null,
-    "arxiv_id": null
-  },
-  {
-    "id": "pub-generalized-zsl-multimodal",
-    "title": "Generalised Zero-shot Learning with Multi-modal Ensemble Methods",
-    "authors": [
-      "R Felix",
-      "B Harwood",
-      "V Lempitsky"
-    ],
-    "venue": "International Conference on Computer Vision, 2018",
-    "year": 2018,
-    "citations": 0,
-    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=ja&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:Y0pCki6q_DkC",
-    "category": "conference",
-    "abstract": "This work presents multi-modal ensemble methods for generalized zero-shot learning, combining visual and semantic information effectively.",
-    "doi": null,
-    "arxiv_id": null
-  },
-  {
-    "id": "pub-pass-peer-agreement-alt",
-    "title": "Pass: Peer-Agreement Based Sample Selection for Training with Instance Dependent Noisy Labels",
-    "authors": [
-      "A Garg",
-      "C Nguyen",
-      "R Felix",
-      "TT Do",
-      "G Carneiro"
-    ],
-    "venue": "International Conference on Machine Learning, 2022",
-    "year": 2022,
-    "citations": 0,
-    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=ja&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:Y0pCki6q_DkC",
-    "category": "conference",
-    "abstract": "PASS introduces a peer-agreement based sample selection method for training with instance-dependent noisy labels, improving robustness in noisy learning scenarios.",
-    "doi": null,
-    "arxiv_id": null
-  },
-  {
-    "id": "pub-augmentation-network-alt",
-    "title": "Augmentation Network for Generalised Zero-Shot Learning",
-    "authors": [
-      "R Felix",
-      "B Harwood",
-      "V Lempitsky"
-    ],
-    "venue": "International Conference on Computer Vision, 2019",
-    "year": 2019,
-    "citations": 0,
-    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=ja&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:Y0pCki6q_DkC",
-    "category": "conference",
-    "abstract": "This paper introduces an augmentation network for generalized zero-shot learning that generates synthetic features for unseen classes.",
-    "doi": null,
-    "arxiv_id": null
-  },
-  {
-    "id": "pub-multimodal-cycle-consistent",
-    "title": "Multi-modal cycle-consistent generalized zero-shot learning",
-    "authors": [
-      "R Felix",
-      "B Harwood",
-      "V Lempitsky"
-    ],
-    "venue": "International Conference on Computer Vision, 2018",
-    "year": 2018,
-    "citations": 0,
-    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=ja&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:Y0pCki6q_DkC",
-    "category": "conference",
-    "abstract": "We present a multi-modal cycle-consistent approach for generalized zero-shot learning that ensures consistency across different modalities.",
-    "doi": null,
-    "arxiv_id": null
-  }
-]
+    {
+      "id": "pub-5b3163b6",
+      "title": "AEON: Adaptive Estimation of Instance-Dependent In-Distribution and Out-of-Distribution Label Noise for Robust Learning",
+      "authors": [
+        "A Garg",
+        "C Nguyen",
+        "R Felix",
+        "Y Liu",
+        "TT Do",
+        "G Carneiro"
+      ],
+      "venue": "arXiv preprint arXiv:2501.13389, 2025",
+      "year": 2025,
+      "citations": 1,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:kNdYIx-mwKoC",
+      "category": "preprint",
+      "abstract": "Robust training with noisy labels is a critical challenge in image classification, offering the potential to reduce reliance on costly clean-label datasets. Real-world datasets often contain a mix of in-distribution (ID) and out-of-distribution (OOD) instance-dependent label noise, a challenge that is rarely addressed simultaneously by existing methods and is further compounded by the lack of comprehensive benchmarking datasets. Furthermore, even though current noisy-label learning approaches attempt to find noisy-label samples during training, these methods do not aim to estimate ID and OOD noise rates to promote their effectiveness in the selection of such noisy-label samples, and they are often represented by inefficient multi-stage learning algorithms. We propose the Adaptive Estimation of Instance-Dependent In-Distribution and Out-of-Distribution Label Noise (AEON) approach to address these research gaps. AEON is an efficient one-stage noisy-label learning methodology that dynamically estimates instance-dependent ID and OOD label noise rates to enhance robustness to complex noise settings. Additionally, we introduce a new benchmark reflecting real-world ID and OOD noise scenarios. Experiments demonstrate that AEON achieves state-of-the-art performance on both synthetic and real-world datasets",
+      "doi": null,
+      "arxiv_id": "2501.13389"
+    },
+    {
+      "id": "pub-9e6dacfc",
+      "title": "Noisy-label Learning with Sample Selection based on Noise Rate Estimate",
+      "authors": [
+        "A Garg",
+        "C Nguyen",
+        "R Felix",
+        "TT Do",
+        "G Carneiro"
+      ],
+      "venue": "",
+      "year": 2024,
+      "citations": 2,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:5nxA0vEk-isC",
+      "category": "conference",
+      "abstract": "Noisy-labels are challenging for deep learning due to the high capacity of the deep models that can overfit noisy-label training samples. Arguably the most realistic and coincidentally challenging type of label noise is the instance-dependent noise (IDN), where the labelling errors are caused by the ambivalent information present in the images. The most successful label noise learning techniques to address IDN problems usually contain a noisy-label sample selection stage to separate clean and noisy-label samples during training. Such sample selection depends on a criterion, such as loss or gradient, and on a curriculum to define the proportion of training samples to be classified as clean at each training epoch. Even though the estimated noise rate from the training set appears to be a natural signal to be used in the definition of this curriculum, previous approaches generally rely on arbitrary thresholds or pre-defined selection functions to the best of our knowledge. This paper addresses this research gap by proposing a new noisy-label learning graphical model that can easily accommodate state-of-the-art (SOTA) noisy-label learning methods and provide them with a reliable noise rate estimate to be used in a new sample selection curriculum. We show empirically that our model integrated with many SOTA methods can improve their results in many IDN benchmarks, including synthetic and real-world datasets.",
+      "doi": null,
+      "arxiv_id": null
+    },
+    {
+      "id": "pub-6f8d2ddf",
+      "title": "Instance-Dependent Noisy-Label Learning with Graphical Model Based Noise-Rate Estimation",
+      "authors": [
+        "A Garg",
+        "C Nguyen",
+        "R Felix",
+        "TT Do",
+        "G Carneiro"
+      ],
+      "venue": "European Conference on Computer Vision, 372-389, 2024",
+      "year": 2024,
+      "citations": 0,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:MXK_kJrjxJIC",
+      "category": "conference",
+      "abstract": "Deep learning faces a formidable challenge when handling noisy labels, as models tend to overfit samples affected by label noise. This challenge is further compounded by the presence of instance-dependent noise (IDN), a realistic form of label noise arising from ambiguous sample information. To address IDN, Label Noise Learning (LNL) incorporates a sample selection stage to differentiate clean and noisy-label samples. This stage uses an arbitrary criterion and a pre-defined curriculum that initially selects most samples as noisy and gradually decreases this selection rate during training. Such curriculum is sub-optimal since it does not consider the actual label noise rate in the training set. This paper addresses this issue with a new noise-rate estimation method that is easily integrated with most state-of-the-art (SOTA) LNL methods to produce a more effective curriculum. Synthetic and real-world benchmarks …",
+      "doi": null,
+      "arxiv_id": null
+    },
+    {
+      "id": "pub-eb30e6d0",
+      "title": "Pass: Peer-Agreement Based Sample Selection for Training with Instance Dependent Noisy Labels",
+      "authors": [
+        "A Garg",
+        "C Nguyen",
+        "R Felix",
+        "TT Do",
+        "G Carneiro"
+      ],
+      "venue": "Available at SSRN 5018092, 0",
+      "year": 2024,
+      "citations": 0,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:3fE2CSJIrl8C",
+      "category": "conference",
+      "abstract": "Noisy-label samples pose a significant challenge in deep learning, inducing overfitting effects. Distinguishing the clean-label samples that lie near the decision boundary (ie, the hard samples) from the instance-dependent noisy (IDN) label samples remains a major obstacle for the efficacy of learning with noisy-label (LNL) methods. Current methods such as small-loss hypothesis and feature-based selection struggle to separate these noisy-and clean-label samples, limiting their efficiency in real-world scenarios. To overcome these limitations, we propose a new noisy-label sample detection method, termed Peer-Agreement based Sample Selection (PASS). PASS leverages a trio of classifiers, and uses consensus-driven peer-based agreement between two models to select the samples to train the third model. This peer-based selection approach dynamically separates noisy-and clean-label samples, allowing tailored learning strategies for each group. PASS seamlessly integrates to existing LNL models, enhancing the detection accuracy of noisy-and clean-label samples, leading to improved classification performance across various LNL benchmarks.",
+      "doi": null,
+      "arxiv_id": null
+    },
+    {
+      "id": "pub-531cf537",
+      "title": "Augmentation Network for Generalised Zero-Shot Learning Supplementary Material",
+      "authors": [
+        "R Felix",
+        "M Sasdelli",
+        "I Reid",
+        "G Carneiro"
+      ],
+      "venue": "",
+      "year": 2024,
+      "citations": 0,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:WF5omc3nYNoC",
+      "category": "conference",
+      "abstract": "Fig. 1. Our proposed model Augmentation Network for multi-modal and multi-domain Generalised Zero-Shot Learning (AN-GZSL). AN-GZSL is composed of the augmentation network to generates visual samples, the visual and the semantic networks, a classification calibration (represented by τψ and τφ in (2)) that enables multi-domain classification, and the multi-modal classification that combines the visual and semantic modules.",
+      "doi": null,
+      "arxiv_id": null
+    },
+    {
+      "id": "pub-d5d924da",
+      "title": "Instance-dependent noisy label learning via graphical modelling",
+      "authors": [
+        "A Garg",
+        "C Nguyen",
+        "R Felix",
+        "TT Do",
+        "G Carneiro"
+      ],
+      "venue": "Proceedings of the IEEE/CVF winter conference on applications of computer …, 2023",
+      "year": 2023,
+      "citations": 52,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:hqOjcs7Dif8C",
+      "category": "journal",
+      "abstract": "Noisy labels are unavoidable yet troublesome in the ecosystem of deep learning because models can easily overfit them. There are many types of label noise, such as symmetric, asymmetric and instance-dependent noise (IDN), with IDN being the only type that depends on image information. Such dependence on image information makes IDN a critical type of label noise to study, given that labelling mistakes are caused in large part by insufficient or ambiguous information about the visual classes present in images. Aiming to provide an effective technique to address IDN, we present a new graphical modelling approach called InstanceGM, that combines discriminative and generative models. The main contributions of InstanceGM are: i) the use of the continuous Bernoulli distribution to train the generative model, offering significant training advantages, and ii) the exploration of a state-of-the-art noisy-label discriminative classifier to generate clean labels from instance-dependent noisy-label samples. InstanceGM is competitive with current noisy-label learning approaches, particularly in instance-dependent noise benchmarks using synthetic and real-world datasets, where our method shows better accuracy than the competitors in most experiments.",
+      "doi": null,
+      "arxiv_id": null
+    },
+    {
+      "id": "pub-4f049012",
+      "title": "PASS: Peer-agreement based sample selection for training with noisy labels",
+      "authors": [
+        "A Garg",
+        "C Nguyen",
+        "R Felix",
+        "TT Do",
+        "G Carneiro"
+      ],
+      "venue": "arXiv preprint arXiv:2303.10802, 2023",
+      "year": 2023,
+      "citations": 3,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:0EnyYjriUFMC",
+      "category": "preprint",
+      "abstract": "The prevalence of noisy-label samples poses a significant challenge in deep learning, inducing overfitting effects. This has, therefore, motivated the emergence of learning with noisy-label (LNL) techniques that focus on separating noisy- and clean-label samples to apply different learning strategies to each group of samples. Current methodologies often rely on the small-loss hypothesis or feature-based selection to separate noisy- and clean-label samples, yet our empirical observations reveal their limitations, especially for labels with instance dependent noise (IDN). An important characteristic of IDN is the difficulty to distinguish the clean-label samples that lie near the decision boundary (i.e., the hard samples) from the noisy-label samples. We, therefore, propose a new noisy-label detection method, termed Peer-Agreement based Sample Selection (PASS), to address this problem. Utilising a trio of classifiers, PASS employs consensus-driven peer-based agreement of two models to select the samples to train the remaining model. PASS is easily integrated into existing LNL models, enabling the improvement of the detection accuracy of noisy- and clean-label samples, which increases the classification accuracy across various LNL benchmarks.",
+      "doi": null,
+      "arxiv_id": "2303.10802"
+    },
+    {
+      "id": "pub-ea53ce85",
+      "title": "Progressive Feature Adjustment for Semi-supervised Learning from Pretrained Models",
+      "authors": [
+        "HM Xu",
+        "L Liu",
+        "H Chen",
+        "E Abbasnejad",
+        "R Felix"
+      ],
+      "venue": "Proceedings of the IEEE/CVF International Conference on Computer Vision …, 2023",
+      "year": 2023,
+      "citations": 0,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:8k81kl-MbHgC",
+      "category": "journal",
+      "abstract": "As an effective way to alleviate the burden of data annotation, semi-supervised learning (SSL) provides an attractive solution due to its ability to leverage both labeled and unlabeled data to build a predictive model. While significant progress has been made recently, SSL algorithms are often evaluated and developed under the assumption that the network is randomly initialized. This is in sharp contrast to most vision recognition systems that are built from fine-tuning a pretrained network for better performance. While the marriage of SSL and a pretrained model seems to be straightforward, recent literature suggests that naively applying state-of-the-art SSL with a pretrained model fails to unleash the full potential of training data. In this paper, we postulate the underlying reason is that the pretrained feature representation could bring a bias inherited from the source data, and the bias tends to be magnified through the self-training process in a typical SSL algorithm. To overcome this issue, we propose to use pseudo-labels from the unlabelled data to update the feature extractor that is less sensitive to incorrect labels and only allow the classifier to be trained from the labeled data. More specifically, we progressively adjust the feature extractor to ensure its induced feature distribution maintains a good class separability even under strong input perturbation. Through extensive experimental studies, we show that the proposed approach achieves superior performance over existing solutions.",
+      "doi": null,
+      "arxiv_id": null
+    },
+    {
+      "id": "pub-e5122222",
+      "title": "Cross-modal visual question answering for remote sensing data: The international conference on digital image computing: Techniques and applications (DICTA 2021)",
+      "authors": [
+        "R Felix",
+        "B Repasky",
+        "S Hodge",
+        "R Zolfaghari",
+        "E Abbasnejad",
+        "J Sherrah"
+      ],
+      "venue": "2021 Digital Image Computing: Techniques and Applications (DICTA), 1-9, 2021",
+      "year": 2021,
+      "citations": 15,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:Se3iqnhoufwC",
+      "category": "conference",
+      "abstract": "While querying of structured geo-spatial data such as Google Maps has become commonplace, there remains a wealth of unstructured information in overhead imagery that is largely inaccessible to users. This information can be made accessible using machine learning for Visual Question Answering (VQA) about remote sensing imagery. We propose a novel method for Earth observation based on answering natural language questions about satellite images that uses cross-modal attention between image objects and text. The image is encoded with an object-centric feature space, with self-attention between objects, and the question is encoded with a language transformer network. The image and question representations are fed to a cross-modal transformer network that uses cross-attention between the image and text modalities to generate the answer. Our method is applied to the RSVQA remote sensing …",
+      "doi": null,
+      "arxiv_id": null
+    },
+    {
+      "id": "pub-7a967590",
+      "title": "Augmentation network for generalised zero-shot learning",
+      "authors": [
+        "R Felix",
+        "M Sasdelli",
+        "I Reid",
+        "G Carneiro"
+      ],
+      "venue": "Proceedings of the Asian Conference on Computer Vision, 2020",
+      "year": 2020,
+      "citations": 1,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:ufrVoPGSRksC",
+      "category": "conference",
+      "abstract": "Generalised zero-shot learning (GZSL) is defined by a training process containing a set of visual samples from seen classes and a set of semantic samples from seen and unseen classes, while the testing process consists of the classification of visual samples from the seen and the unseen classes. Current approaches are based on inference processes that rely on the result of a single modality classifier (visual, semantic, or latent joint space) that balances the classification between the seen and unseen classes using gating mechanisms. There are a couple of problems with such approaches: 1) multi-modal classifiers are known to generally be more accurate than single modality classifiers, and 2) gating mechanisms rely on a complex one-class training of an external domain classifier that modulates the seen and unseen classifiers. In this paper, we mitigate these issues by proposing a novel GZSL method--augmentation network that tackles multi-modal and multi-domain inference for generalised zero-shot learning (AN-GZSL). The multi-modal inference combines visual and semantic classification and automatically balances the seen and unseen classification using temperature calibration, without requiring any gating mechanisms or external domain classifiers. Experiments show that our method produces the new state-of-the-art GZSL results for fine-grained benchmark data sets CUB and FLO and for the large-scale data set ImageNet. We also obtain competitive results for coarse-grained data sets SUN and AWA. We show an ablation study that justifies each stage of the proposed AN-GZSL.",
+      "doi": null,
+      "arxiv_id": null
+    },
+    {
+      "id": "pub-559d1eb8",
+      "title": "Generalised Zero-shot Learning with Multi-modal Embedding Spaces",
+      "authors": [
+        "R Felix",
+        "M Sasdelli",
+        "B Harwood",
+        "G Carneiro"
+      ],
+      "venue": "2020 Digital Image Computing: Techniques and Applications (DICTA), 1-8, 2020",
+      "year": 2020,
+      "citations": 0,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:LkGwnXOMwfcC",
+      "category": "conference",
+      "abstract": "Generalised zero-shot learning (GZSL) methods aim to classify previously seen and unseen visual classes by leveraging the semantic information of those classes. In the context of GZSL, semantic information is non-visual data such as a text description of the seen and unseen classes. Previous GZSL methods have explored transformations between visual and semantic spaces, as well as the learning of a latent joint visual and semantic space. In these methods, even though learning has explored a combination of spaces (i.e., visual, semantic or joint latent space), inference tended to focus on using just one of the spaces. By hypothesising that inference must explore all three spaces, we propose a new GZSL method based on a multimodal classification over visual, semantic and joint latent spaces. Another issue affecting current GZSL methods is the intrinsic bias toward the classification of seen classes - a problem …",
+      "doi": null,
+      "arxiv_id": null
+    },
+    {
+      "id": "pub-f43fd8d0",
+      "title": "Generalised zero-shot learning with domain classification in a joint semantic and visual space",
+      "authors": [
+        "R Felix",
+        "B Harwood",
+        "M Sasdelli",
+        "G Carneiro"
+      ],
+      "venue": "2019 Digital Image Computing: Techniques and Applications (DICTA), 1-8, 2019",
+      "year": 2019,
+      "citations": 13,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:2osOgNQ5qMEC",
+      "category": "conference",
+      "abstract": "Generalised zero-shot learning (GZSL) is a classification problem where the learning stage relies on a set of seen visual classes and the inference stage aims to identify both the seen visual classes and a new set of unseen visual classes. Critically, both the learning and inference stages can leverage a semantic representation that is available for the seen and unseen classes. Most state-of-the-art GZSL approaches rely on a mapping between latent visual and semantic spaces without considering if a particular sample belongs to the set of seen or unseen classes. In this paper, we propose a novel GZSL method that learns a joint latent representation that combines both visual and semantic information. This mitigates the need for learning a mapping between the two spaces. Our method also introduces a domain classification that estimates whether a sample belongs to a seen or an unseen class. Our classifier then …",
+      "doi": null,
+      "arxiv_id": null
+    },
+    {
+      "id": "pub-6ba8b094",
+      "title": "Multi-modal cycle-consistent generalized zero-shot learning",
+      "authors": [
+        "R Felix",
+        "I Reid",
+        "G Carneiro"
+      ],
+      "venue": "Proceedings of the European conference on computer vision (ECCV), 21-37, 2018",
+      "year": 2018,
+      "citations": 500,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:u-x6o8ySG0sC",
+      "category": "conference",
+      "abstract": "In generalized zero shot learning (GZSL), the set of classes are split into seen and unseen classes, where training relies on the semantic features of the seen and unseen classes and the visual representations of only the seen classes, while testing uses the visual representations of the seen and unseen classes. Current methods address GZSL by learning a transformation from the visual to the semantic space, exploring the assumption that the distribution of classes in the semantic and visual spaces is relatively similar. Such methods tend to transform unseen testing visual representations into one of the seen classes' semantic features instead of the semantic features of the correct unseen class, resulting in low accuracy GZSL classification. Recently, generative adversarial networks (GAN) have been explored to synthesize visual representations of the unseen classes from their semantic features-the synthesized representations of the seen and unseen classes are then used to train the GZSL classifier. This approach has been shown to boost GZSL classification accuracy, but there is one important missing constraint: there is no guarantee that synthetic visual representations can generate back their semantic feature in a multi-modal cycle-consistent manner. This missing constraint can result in synthetic visual representations that do not represent well their semantic features, which means that the use of this constraint can improve GAN-based approaches. In this paper, we propose the use of such constraint based on a new regularization for the GAN training that forces the generated visual features to reconstruct their original semantic features …",
+      "doi": null,
+      "arxiv_id": null
+    },
+    {
+      "id": "pub-7fd6326f",
+      "title": "Thresholding the courtesy amount of brazilian bank checks using a local methodology",
+      "authors": [
+        "R Felix",
+        "LA da Silva",
+        "LN de Castro"
+      ],
+      "venue": "International Conference on Practical Applications of Agents and Multi-Agent …, 2015",
+      "year": 2015,
+      "citations": 3,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:u5HHmVD_uO8C",
+      "category": "conference",
+      "abstract": "This paper presents a new thresholding methodology for complex background images with an application to the courtesy amount of Brazilian bank checks. Courtesy amount images present a complex background and the proposal of an automatic thresholding process brings benefits to other steps in bank check clearance, such as the Optical Character Recognition (OCR). Experimental results showed that the proposed methodology yields good results, with average accuracy over 95 %, superior to standard methods from the literature.",
+      "doi": null,
+      "arxiv_id": null
+    },
+    {
+      "id": "pub-dfd1fbdc",
+      "title": "Generalised zero-shot learning with a classifier ensemble over multi-modal embedding spaces",
+      "authors": [
+        "R Felix",
+        "B Harwood",
+        "M Sasdelli",
+        "G Carneiro"
+      ],
+      "venue": "arXiv preprint arXiv:1908.02013, 2019",
+      "year": 1908,
+      "citations": 2,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:IjCSPb-OGe4C",
+      "category": "preprint",
+      "abstract": "Generalised zero-shot learning (GZSL) methods aim to classify previously seen and unseen visual classes by leveraging the semantic information of those classes. In the context of GZSL, semantic information is non-visual data such as a text description of both seen and unseen classes. Previous GZSL methods have utilised transformations between visual and semantic embedding spaces, as well as the learning of joint spaces that include both visual and semantic information. In either case, classification is then performed on a single learned space. We argue that each embedding space contains complementary information for the GZSL problem. By using just a visual, semantic or joint space some of this information will invariably be lost. In this paper, we demonstrate the advantages of our new GZSL method that combines the classification of visual, semantic and joint spaces. Most importantly, this ensembling allows for more information from the source domains to be seen during classification. An additional contribution of our work is the application of a calibration procedure for each classifier in the ensemble. This calibration mitigates the problem of model selection when combining the classifiers. Lastly, our proposed method achieves state-of-the-art results on the CUB, AWA1 and AWA2 benchmark data sets and provides competitive performance on the SUN data set.",
+      "doi": null,
+      "arxiv_id": "1908.02013"
+    },
+    {
+      "id": "pub-2fe97e65",
+      "title": "Multi-modal ensemble classification for generalized zero shot learning",
+      "authors": [
+        "R Felix",
+        "M Sasdelli",
+        "I Reid",
+        "G Carneiro"
+      ],
+      "venue": "arXiv preprint arXiv:1901.04623, 2019",
+      "year": 1901,
+      "citations": 22,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:d1gkVwhDpl0C",
+      "category": "preprint",
+      "abstract": "Generalized zero shot learning (GZSL) is defined by a training process containing a set of visual samples from seen classes and a set of semantic samples from seen and unseen classes, while the testing process consists of the classification of visual samples from seen and unseen classes. Current approaches are based on testing processes that focus on only one of the modalities (visual or semantic), even when the training uses both modalities (mostly for regularizing the training process). This under-utilization of modalities, particularly during testing, can hinder the classification accuracy of the method. In addition, we note a scarce attention to the development of learning methods that explicitly optimize a balanced performance of seen and unseen classes. Such issue is one of the reasons behind the vastly superior classification accuracy of seen classes in GZSL methods. In this paper, we mitigate these issues by proposing a new GZSL method based on multi-modal training and testing processes, where the optimization explicitly promotes a balanced classification accuracy between seen and unseen classes. Furthermore, we explore Bayesian inference for the visual and semantic classifiers, which is another novelty of our work in the GZSL framework. Experiments show that our method holds the state of the art (SOTA) results in terms of harmonic mean (H-mean) classification between seen and unseen classes and area under the seen and unseen curve (AUSUC) on several public GZSL benchmarks.",
+      "doi": null,
+      "arxiv_id": "1901.04623"
+    }
+  ]

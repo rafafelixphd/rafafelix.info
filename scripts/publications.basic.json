@@ -1,0 +1,298 @@
+[
+  {
+    "id": "pub-5b3163b6",
+    "title": "AEON: Adaptive Estimation of Instance-Dependent In-Distribution and Out-of-Distribution Label Noise for Robust Learning",
+    "authors": [
+      "A Garg",
+      "C Nguyen",
+      "R Felix",
+      "Y Liu",
+      "TT Do",
+      "G Carneiro"
+    ],
+    "venue": "arXiv preprint arXiv:2501.13389, 2025",
+    "year": 2025,
+    "citations": 1,
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:kNdYIx-mwKoC",
+    "category": "preprint",
+    "abstract": null,
+    "doi": null,
+    "arxiv_id": null
+  },
+  {
+    "id": "pub-9e6dacfc",
+    "title": "Noisy-label Learning with Sample Selection based on Noise Rate Estimate",
+    "authors": [
+      "A Garg",
+      "C Nguyen",
+      "R Felix",
+      "TT Do",
+      "G Carneiro"
+    ],
+    "venue": "",
+    "year": 2024,
+    "citations": 2,
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:5nxA0vEk-isC",
+    "category": "conference",
+    "abstract": null,
+    "doi": null,
+    "arxiv_id": null
+  },
+  {
+    "id": "pub-6f8d2ddf",
+    "title": "Instance-Dependent Noisy-Label Learning with Graphical Model Based Noise-Rate Estimation",
+    "authors": [
+      "A Garg",
+      "C Nguyen",
+      "R Felix",
+      "TT Do",
+      "G Carneiro"
+    ],
+    "venue": "European Conference on Computer Vision, 372-389, 2024",
+    "year": 2024,
+    "citations": 0,
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:MXK_kJrjxJIC",
+    "category": "conference",
+    "abstract": null,
+    "doi": null,
+    "arxiv_id": null
+  },
+  {
+    "id": "pub-eb30e6d0",
+    "title": "Pass: Peer-Agreement Based Sample Selection for Training with Instance Dependent Noisy Labels",
+    "authors": [
+      "A Garg",
+      "C Nguyen",
+      "R Felix",
+      "TT Do",
+      "G Carneiro"
+    ],
+    "venue": "Available at SSRN 5018092, 0",
+    "year": 2024,
+    "citations": 0,
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:3fE2CSJIrl8C",
+    "category": "conference",
+    "abstract": null,
+    "doi": null,
+    "arxiv_id": null
+  },
+  {
+    "id": "pub-531cf537",
+    "title": "Augmentation Network for Generalised Zero-Shot Learning Supplementary Material",
+    "authors": [
+      "R Felix",
+      "M Sasdelli",
+      "I Reid",
+      "G Carneiro"
+    ],
+    "venue": "",
+    "year": 2024,
+    "citations": 0,
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:WF5omc3nYNoC",
+    "category": "conference",
+    "abstract": null,
+    "doi": null,
+    "arxiv_id": null
+  },
+  {
+    "id": "pub-d5d924da",
+    "title": "Instance-dependent noisy label learning via graphical modelling",
+    "authors": [
+      "A Garg",
+      "C Nguyen",
+      "R Felix",
+      "TT Do",
+      "G Carneiro"
+    ],
+    "venue": "Proceedings of the IEEE/CVF winter conference on applications of computer …, 2023",
+    "year": 2023,
+    "citations": 52,
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:hqOjcs7Dif8C",
+    "category": "journal",
+    "abstract": null,
+    "doi": null,
+    "arxiv_id": null
+  },
+  {
+    "id": "pub-4f049012",
+    "title": "PASS: Peer-agreement based sample selection for training with noisy labels",
+    "authors": [
+      "A Garg",
+      "C Nguyen",
+      "R Felix",
+      "TT Do",
+      "G Carneiro"
+    ],
+    "venue": "arXiv preprint arXiv:2303.10802, 2023",
+    "year": 2023,
+    "citations": 3,
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:0EnyYjriUFMC",
+    "category": "preprint",
+    "abstract": null,
+    "doi": null,
+    "arxiv_id": null
+  },
+  {
+    "id": "pub-ea53ce85",
+    "title": "Progressive Feature Adjustment for Semi-supervised Learning from Pretrained Models",
+    "authors": [
+      "HM Xu",
+      "L Liu",
+      "H Chen",
+      "E Abbasnejad",
+      "R Felix"
+    ],
+    "venue": "Proceedings of the IEEE/CVF International Conference on Computer Vision …, 2023",
+    "year": 2023,
+    "citations": 0,
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:8k81kl-MbHgC",
+    "category": "journal",
+    "abstract": null,
+    "doi": null,
+    "arxiv_id": null
+  },
+  {
+    "id": "pub-e5122222",
+    "title": "Cross-modal visual question answering for remote sensing data: The international conference on digital image computing: Techniques and applications (DICTA 2021)",
+    "authors": [
+      "R Felix",
+      "B Repasky",
+      "S Hodge",
+      "R Zolfaghari",
+      "E Abbasnejad",
+      "J Sherrah"
+    ],
+    "venue": "2021 Digital Image Computing: Techniques and Applications (DICTA), 1-9, 2021",
+    "year": 2021,
+    "citations": 15,
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:Se3iqnhoufwC",
+    "category": "conference",
+    "abstract": null,
+    "doi": null,
+    "arxiv_id": null
+  },
+  {
+    "id": "pub-7a967590",
+    "title": "Augmentation network for generalised zero-shot learning",
+    "authors": [
+      "R Felix",
+      "M Sasdelli",
+      "I Reid",
+      "G Carneiro"
+    ],
+    "venue": "Proceedings of the Asian Conference on Computer Vision, 2020",
+    "year": 2020,
+    "citations": 1,
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:ufrVoPGSRksC",
+    "category": "conference",
+    "abstract": null,
+    "doi": null,
+    "arxiv_id": null
+  },
+  {
+    "id": "pub-559d1eb8",
+    "title": "Generalised Zero-shot Learning with Multi-modal Embedding Spaces",
+    "authors": [
+      "R Felix",
+      "M Sasdelli",
+      "B Harwood",
+      "G Carneiro"
+    ],
+    "venue": "2020 Digital Image Computing: Techniques and Applications (DICTA), 1-8, 2020",
+    "year": 2020,
+    "citations": 0,
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:LkGwnXOMwfcC",
+    "category": "conference",
+    "abstract": null,
+    "doi": null,
+    "arxiv_id": null
+  },
+  {
+    "id": "pub-f43fd8d0",
+    "title": "Generalised zero-shot learning with domain classification in a joint semantic and visual space",
+    "authors": [
+      "R Felix",
+      "B Harwood",
+      "M Sasdelli",
+      "G Carneiro"
+    ],
+    "venue": "2019 Digital Image Computing: Techniques and Applications (DICTA), 1-8, 2019",
+    "year": 2019,
+    "citations": 13,
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:2osOgNQ5qMEC",
+    "category": "conference",
+    "abstract": null,
+    "doi": null,
+    "arxiv_id": null
+  },
+  {
+    "id": "pub-6ba8b094",
+    "title": "Multi-modal cycle-consistent generalized zero-shot learning",
+    "authors": [
+      "R Felix",
+      "I Reid",
+      "G Carneiro"
+    ],
+    "venue": "Proceedings of the European conference on computer vision (ECCV), 21-37, 2018",
+    "year": 2018,
+    "citations": 500,
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:u-x6o8ySG0sC",
+    "category": "conference",
+    "abstract": null,
+    "doi": null,
+    "arxiv_id": null
+  },
+  {
+    "id": "pub-7fd6326f",
+    "title": "Thresholding the courtesy amount of brazilian bank checks using a local methodology",
+    "authors": [
+      "R Felix",
+      "LA da Silva",
+      "LN de Castro"
+    ],
+    "venue": "International Conference on Practical Applications of Agents and Multi-Agent …, 2015",
+    "year": 2015,
+    "citations": 3,
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:u5HHmVD_uO8C",
+    "category": "conference",
+    "abstract": null,
+    "doi": null,
+    "arxiv_id": null
+  },
+  {
+    "id": "pub-dfd1fbdc",
+    "title": "Generalised zero-shot learning with a classifier ensemble over multi-modal embedding spaces",
+    "authors": [
+      "R Felix",
+      "B Harwood",
+      "M Sasdelli",
+      "G Carneiro"
+    ],
+    "venue": "arXiv preprint arXiv:1908.02013, 2019",
+    "year": 1908,
+    "citations": 2,
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:IjCSPb-OGe4C",
+    "category": "preprint",
+    "abstract": null,
+    "doi": null,
+    "arxiv_id": null
+  },
+  {
+    "id": "pub-2fe97e65",
+    "title": "Multi-modal ensemble classification for generalized zero shot learning",
+    "authors": [
+      "R Felix",
+      "M Sasdelli",
+      "I Reid",
+      "G Carneiro"
+    ],
+    "venue": "arXiv preprint arXiv:1901.04623, 2019",
+    "year": 1901,
+    "citations": 22,
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nijDcmQAAAAJ&citation_for_view=nijDcmQAAAAJ:d1gkVwhDpl0C",
+    "category": "preprint",
+    "abstract": null,
+    "doi": null,
+    "arxiv_id": null
+  }
+]

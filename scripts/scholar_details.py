@@ -18,10 +18,14 @@ def scrape_paper_details(paper_url):
         abstract = None
         abstract_selectors = [
             'div.gsh_csp',
-            'div.gsh_small',
+            'div.gsh_small', 
             'div[data-src]',
             'div.gs_rs',
-            'div.gs_ggs'
+            'div.gs_ggs',
+            'div.gs_rs',
+            'div.gsh_small',
+            'div.gs_ggs',
+            'div.gsh_csp'
         ]
         
         for selector in abstract_selectors:
@@ -30,6 +34,16 @@ def scrape_paper_details(paper_url):
                 abstract_text = abstract_elem.get_text(strip=True)
                 if abstract_text and len(abstract_text) > 50:  # Valid abstract
                     abstract = abstract_text
+                    break
+        
+        # If no abstract found with selectors, try to find any text that looks like an abstract
+        if not abstract:
+            # Look for text blocks that might contain abstracts
+            text_blocks = soup.find_all('div', string=lambda text: text and len(text.strip()) > 100)
+            for block in text_blocks:
+                text = block.get_text(strip=True)
+                if len(text) > 100 and not any(word in text.lower() for word in ['doi:', 'arxiv:', 'citation', 'references']):
+                    abstract = text
                     break
         
         # Extract DOI - try multiple methods
@@ -57,15 +71,15 @@ def scrape_paper_details(paper_url):
         print(f"Error scraping paper details: {e}")
         return None, None, None
 
-def enhance_publications_with_details(json_file="../public/data/publications.json"):
+def enhance_publications_with_details(input_file="./publications.basic.json", output_file="./publications.detailed.json"):
     """Enhance existing publications with detailed information"""
     
     # Load existing publications
     try:
-        with open(json_file, 'r', encoding='utf-8') as f:
+        with open(input_file, 'r', encoding='utf-8') as f:
             publications = json.load(f)
     except FileNotFoundError:
-        print(f"Error: {json_file} not found")
+        print(f"Error: {input_file} not found")
         return
     
     if not publications:
@@ -73,31 +87,57 @@ def enhance_publications_with_details(json_file="../public/data/publications.jso
         return
     
     print(f"Enhancing {len(publications)} publications with detailed information...")
+    print(f"Input file: {input_file}")
+    print(f"Output file: {output_file}")
     
     enhanced_count = 0
+    skipped_count = 0
+    
     for i, pub in enumerate(publications):
-        if pub.get('url') and (not pub.get('abstract') or not pub.get('doi')):
+        if pub.get('url'):
             print(f"[{i+1}/{len(publications)}] Scraping details for: {pub['title'][:50]}...")
             
-            abstract, doi, arxiv_id = scrape_paper_details(pub['url'])
+            try:
+                abstract, doi, arxiv_id = scrape_paper_details(pub['url'])
+                
+                # Update publication with new details
+                found_any = False
+                if abstract:
+                    pub['abstract'] = abstract
+                    print(f"  ✓ Found abstract ({len(abstract)} chars)")
+                    found_any = True
+                if doi:
+                    pub['doi'] = doi
+                    print(f"  ✓ Found DOI: {doi}")
+                    found_any = True
+                if arxiv_id:
+                    pub['arxiv_id'] = arxiv_id
+                    print(f"  ✓ Found arXiv ID: {arxiv_id}")
+                    found_any = True
+                
+                if found_any:
+                    enhanced_count += 1
+                else:
+                    print(f"  ⚠ No additional details found")
+                    skipped_count += 1
+                
+            except Exception as e:
+                print(f"  ❌ Error processing: {e}")
+                skipped_count += 1
             
-            # Update publication with new details
-            if abstract:
-                pub['abstract'] = abstract
-            if doi:
-                pub['doi'] = doi
-            if arxiv_id:
-                pub['arxiv_id'] = arxiv_id
-            
-            enhanced_count += 1
-            time.sleep(2)  # Rate limiting
+            time.sleep(2)  # Rate limiting to avoid being blocked
+        else:
+            print(f"[{i+1}/{len(publications)}] Skipping (no URL): {pub['title'][:50]}...")
+            skipped_count += 1
     
-    # Save enhanced publications
-    with open(json_file, 'w', encoding='utf-8') as f:
+    # Save enhanced publications to new file
+    with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(publications, f, indent=2, ensure_ascii=False)
     
-    print(f"\nEnhanced {enhanced_count} publications")
-    print(f"Saved enhanced data to {json_file}")
+    print(f"\n📊 Summary:")
+    print(f"  ✓ Enhanced: {enhanced_count} publications")
+    print(f"  ⚠ Skipped: {skipped_count} publications")
+    print(f"  📁 Saved enhanced data to: {output_file}")
 
 def main():
     print("Enhancing publications with detailed information...")
