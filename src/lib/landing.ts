@@ -121,13 +121,13 @@ export const landingContent: LandingData = {
     { id: "dstg", name: "DSTG (Australian Defence)", type: "collaboration", logo: "/images/icons/dstg.png" }
   ],
   hero: {
-    headline: "Build Useful, Safe AI That Pays for Itself.",
+    headline: "Senior Fractional AI/ML Technical Lead",
     subheading:
-      "I help founders, researchers, and organizations turn ambitious AI ideas into systems that actually work — fast, ethical, and scalable.",
+      "Bridging the gap between 'broken' R&D prototypes and commercially viable perception assets. Prevent expensive rework and compress delivery timelines.",
     proof:
       "Trusted by leaders from TikTok, Motorola, Lenovo, and the University of Adelaide, delivering impact from billion-scale deployments to lean startup pilots.",
-    ctaPrimary: "Book a Free Fit Call",
-    ctaSecondary: "Explore Services"
+    ctaPrimary: "Book a Discovery Call",
+    ctaSecondary: "View Service Tiers"
   },
   about: {
     headline: "More than a decade turning research into real-world AI",
@@ -153,70 +153,71 @@ export const landingContent: LandingData = {
   },
   services: [
     {
-      id: "feasibility-sprint",
-      title: "AI Feasibility Sprint",
-      duration: "2 Days · Remote or On-site",
+      id: "tier-1-pulse",
+      title: "Tier I: Strategic Pulse",
+      duration: "Bi-weekly oversight · Monthly Retainer",
       description:
-        "For founders with a big AI vision but unclear execution. We turn ambiguity into a concrete, buildable roadmap.",
+        "Prevent wrong decisions. High-level review of roadmap directions to prevent long-term technical debt and ensure feasibility.",
       deliverables: [
-        "Feasibility grid with build vs buy analysis",
-        "Trimmed MVP specification",
-        "ROI and risk model",
-        "Hiring or vendor plan",
-        "Starter safety checklist"
+        "Architecture & roadmap review",
+        "Written feedback on sprint plans",
+        "Bounded async Q&A window",
+        "Early risk flags on CV/ML feasibility",
+        "Monthly leadership sync"
       ],
       outcome:
-        "A go/no-go decision within one week — with a validated backlog and clear next steps.",
-      ctaText: "Run My Sprint"
+        "Reduced execution risk and fewer wasted cycles.",
+      ctaText: "Enquire for Tier I"
     },
     {
-      id: "safety-audit",
-      title: "Trust & Safety Audit",
-      duration: "2 Weeks · Light-touch Review",
+      id: "tier-2-logic",
+      title: "Tier II: Architecture Logic",
+      duration: "Weekly design cycles · Monthly Retainer",
       description:
-        "For teams close to launch who want confidence that their AI is compliant, fair, and resilient before scaling.",
+        "Make the team effective. Providing blueprints for scalable MLOps and latest AI/ML techniques. Objective verification of engineering work.",
       deliverables: [
-        "Risk and compliance map",
-        "Policy and accountability matrix",
-        "Red-team prompt suite",
-        "Incident escalation playbook",
-        "Final safety readiness checklist"
+        "Architectural design leadership",
+        "Sprint direction & validation",
+        "Selective high-impact code reviews",
+        "Design docs & technical decision-making",
+        "Bi-weekly leadership syncs"
       ],
       outcome:
-        "Launch with confidence — documented guardrails, mitigation strategy, and peace of mind.",
-      ctaText: "Request Audit"
+        "Clarity, velocity, and reduced rework.",
+      ctaText: "Enquire for Tier II"
     },
     {
-      id: "founder-coach",
-      title: "Founder AI Coach",
-      duration: "Monthly Retainer · 2 Calls + Async Support",
+      id: "tier-3-orchestration",
+      title: "Tier III: Technical Orchestration",
+      duration: "Daily tactical engagement · Monthly Retainer",
       description:
-        "For founders navigating AI strategy, product decisions, or vendor chaos — get a clear technical sounding board and roadmap alignment.",
+        "Drive outcomes. Architecting the technical strategy and end-to-end AI/ML roadmap to drive commercial value.",
       deliverables: [
-        "Decision memos and prioritization frameworks",
-        "Quarterly roadmap reviews",
-        "Vendor and tooling shortlists",
-        "Tailored guidance on build, scale, and safety"
+        "End-to-end technical leadership",
+        "Task planning & prioritization",
+        "Deep code reviews & PR contributions",
+        "Production-readiness enforcement",
+        "Active technical course correction"
       ],
       outcome:
-        "Faster, safer decisions with fewer false starts — and a strategy you can defend to investors and your team.",
-      ctaText: "Apply for Coaching"
+        "Delivery and risk transfer. Faster execution.",
+      ctaText: "Enquire for Tier III"
     },
     {
-      id: "career-mentorship",
-      title: "AI Career Mentorship",
-      duration: "Monthly · 1:1 or Group Sessions",
+      id: "tier-4-mvp",
+      title: "The MVP (Tier IV)",
+      duration: "3-month contract minimum",
       description:
-        "For researchers, engineers, and students seeking clarity on their AI career path — from academia to industry, or from contributor to leader.",
+        "Outcome-based production managed by a specialized external unit. Full-cycle production and delivery of perception modules.",
       deliverables: [
-        "Personalized roadmap to align your skills with market demand",
-        "Portfolio and publication review for professional positioning",
-        "Mock interviews and feedback for FAANG and research roles",
-        "Strategies for networking, visibility, and thought leadership"
+        "End-to-end delivery of perception modules",
+        "Vetted engineering squad",
+        "Full SDLC management",
+        "R&D to Deployment ownership"
       ],
       outcome:
-        "A clear, confident path forward — with measurable growth goals and direct feedback from someone who’s lived both research and product sides of AI.",
-      ctaText: "Start Mentorship"
+        "Launch with confidence. A production-grade asset ready for market.",
+      ctaText: "Discuss MVP Build"
     }
   ],
   results: {
@@ -252,59 +253,59 @@ export const landingContent: LandingData = {
   },
   timeline: [
     {
-      id: "lean-prototype",
-      title: "Prototype",
-      duration: "1–2 Weeks",
+      id: "engage",
+      title: "Engagement",
+      duration: "Week 1",
       images: ["/images/landing/mvp_1.1.webp"],
       description:
-        "Start lean. Validate your idea fast using low-code tools and hosted AI models — no heavy engineering required.",
+        "We align on the tier that fits your needs. Whether it's strategic oversight or full orchestration, we set the ground rules and communication channels.",
       deliverables: [
-        "Rapid proof of concept",
-        "Core user flow mapped and tested",
-        "Basic prompt and response evaluation",
-        "Clear next-step recommendations"
+        "Contract & IP agreement",
+        "Access to repositories & tools",
+        "Initial roadmap review",
+        "Communication cadence setup"
       ]
     },
     {
-      id: "core-mvp",
-      title: "Core MVP",
-      duration: "4–6 Weeks",
+      id: "audit-plan",
+      title: "Audit & Plan",
+      duration: "Weeks 2-4",
       images: ["/images/landing/mvp_2.3.webp"],
       description:
-        "Build your first working product using reliable, off-the-shelf AI systems. Test real behaviour with real users.",
+        "I dive into your architecture, code, and team dynamics. We identify bottlenecks, technical debt, and immediate risks.",
       deliverables: [
-        "Functional MVP with basic AI behaviour",
-        "Integrations with your existing tools or APIs",
-        "Performance and reliability metrics",
-        "User feedback loop for early learning"
+        "Architectural audit report",
+        "Risk mitigation plan",
+        "Refined technical roadmap",
+        "Immediate 'quick wins' identification"
       ]
     },
     {
-      id: "specialized-mvp",
-      title: "The MVP",
-      duration: "6–10 Weeks",
+      id: "execute",
+      title: "Execution & Oversight",
+      duration: "Ongoing",
       images: ["/images/landing/mvp_3.2.webp"],
       description:
-        "Specialize your AI by adapting existing models to your domain. Create clear differentiation and measurable ROI.",
+        "I work alongside your team (or as the lead) to execute the roadmap. Regular syncs, code reviews, and strategic adjustments ensure we stay on track.",
       deliverables: [
-        "Domain-tuned AI components",
-        "Advanced evaluation and safety checks",
-        "Custom dashboards or retrieval pipelines",
-        "Production-ready deployment plan"
+        "Regular code & design reviews",
+        "Sprint planning & retrospective participation",
+        "Problem-solving & unblocking",
+        "Continuous alignment with business goals"
       ]
     },
     {
-      id: "beast-mvp",
-      title: "Beast MVP",
-      duration: "3+ Months",
+      id: "delivery",
+      title: "Delivery & Transfer",
+      duration: "Milestone-based",
       images: ["/images/landing/mvp_4.1.webp"],
       description:
-        "Scale the vision. Coordinate the full product lifecycle — from data pipelines and compliance to continuous improvement.",
+        "Ensuring the delivered systems are production-ready, documented, and maintainable. Knowledge transfer to your internal team.",
       deliverables: [
-        "End-to-end lifecycle strategy and documentation",
-        "Cross-team roadmap and compliance workflows",
-        "Monitoring and iteration infrastructure",
-        "Post-launch governance and performance review"
+        "Production-ready code delivery",
+        "System documentation",
+        "Team training & knowledge transfer",
+        "Post-delivery support plan"
       ]
     }
   ],

@@ -13,7 +13,7 @@ export default function LandingServices({ data }: LandingServicesProps) {
             Core Services
           </h2>
           <p className="text-xl text-text-secondary max-w-3xl mx-auto">
-            Three flagship offers designed to move you from idea to impact
+            Comprehensive engagement tiers designed to match your team's maturity and velocity
           </p>
         </div>
         
